@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Set Pallette Array Entry
 ; Alvin Albrecht 06.2003

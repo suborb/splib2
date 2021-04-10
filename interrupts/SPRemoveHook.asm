@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Remove hook
 ; Alvin Albrecht 01.2003

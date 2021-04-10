@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Register hook at front of list
 ; Alvin Albrecht 01.2003

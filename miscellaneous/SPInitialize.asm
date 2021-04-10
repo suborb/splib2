@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Initialize Sprite Pack's Background Tile & Sprite Module
 ; Alvin Albrecht 06.2003

@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; AMX Mouse Position
 ; Alvin Albrecht 02.2003

@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; JoySinclair2
 ; Alvin Albrecht 2002

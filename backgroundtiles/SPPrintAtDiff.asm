@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; PrintAtDiff
 ; Alvin Albrecht 01.2003

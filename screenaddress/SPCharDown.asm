@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; CharDown
 ; Alvin Albrecht 2002

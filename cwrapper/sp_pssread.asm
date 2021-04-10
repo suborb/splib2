@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 
 ;
 ;      Sprite Pack V2.2

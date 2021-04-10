@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; IM2 Interrupt Initialization
 ; Alvin Albrecht 01.2003

@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ; Swap Memory Blocks
 ; Alvin Albrecht 03.2003
 ;

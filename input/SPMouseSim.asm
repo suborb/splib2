@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ; Simulated Mouse
 ; Alvin Albrecht 06.2003
 

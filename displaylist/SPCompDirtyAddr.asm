@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; CompDirtyAddr
 ; Alvin Albrecht 01.2003

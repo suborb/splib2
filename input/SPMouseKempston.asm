@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Kempston Mouse
 ; Based on Chris Cowley's Basic Mouse Driver code <ccowley@grok.co.uk>

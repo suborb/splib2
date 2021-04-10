@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 
 ; 32-Bit Random Number Generator
 ; Thanks to Nick Fleming for the code.

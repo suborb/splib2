@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Empty ISR routine
 ; Alvin Albrecht 01.2003

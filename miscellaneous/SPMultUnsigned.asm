@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 
 ; Fast Unsigned Multiply
 ; Thanks to Nick Fleming for the code.

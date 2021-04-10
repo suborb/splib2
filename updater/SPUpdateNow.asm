@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Update Now
 ; Alvin Albrecht 07.2003
@@ -89,7 +90,7 @@ ENDIF
 ;
 
 .SPUpdateNow
-   ld de,$4000 + (256 * (SP_ROWSTART ~ $18)) + (32 * (SP_ROWSTART ~ 7))   ; de = screen address
+   ld de,$4000 + (256 * (SP_ROWSTART & $18)) + (32 * (SP_ROWSTART & 7))   ; de = screen address
 IF DISP_TMXDUAL
    ld a,(SPScreen)
    add a,d

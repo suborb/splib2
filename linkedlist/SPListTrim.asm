@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; void *ListTrim(LIST *list)
 ; Alvin Albrecht 02.2003

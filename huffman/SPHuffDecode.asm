@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Static Huffman Decoder
 ; Alvin Albrecht 03.2003

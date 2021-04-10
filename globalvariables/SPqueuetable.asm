@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Dynamic Block Memory Allocator
 ; Alvin Albrecht 2002

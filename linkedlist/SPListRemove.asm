@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; void *ListRemove(LIST *list)
 ; Alvin Albrecht 02.2003

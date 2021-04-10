@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; void *ListSearch(LIST *list, int (*match)(void *item1, void *item2), void *item1)
 ; Alvin Albrecht 02.2003

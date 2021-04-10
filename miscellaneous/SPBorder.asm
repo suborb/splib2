@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; Set Border Colour
 ; Alvin Albrecht 07.2003

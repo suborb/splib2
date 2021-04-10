@@ -1,3 +1,4 @@
+SECTION code_temp_sp1
 ;
 ; PrintString
 ; Alvin Albrecht 06.2003
@@ -470,7 +471,7 @@ ENDIF
 .codeGotoX
    ld b,(hl)
    inc hl
-   jp computePos
+   jp computepos
 
 .codeNOP
-   jp computePos
+   jp computepos
