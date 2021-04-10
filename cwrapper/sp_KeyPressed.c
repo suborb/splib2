@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-int sp_KeyPressed(uint scancode)
+int sp_KeyPressed(uint16_t scancode)
 {
 #asm
-   LIB SPKeyPressed
+   EXTERN SPKeyPressed
 
    ld hl,2
    add hl,sp

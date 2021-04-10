@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; DeleteSpr
 ; Alvin Albrecht 2002
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPDeleteSpr
-XREF _u_free
-XDEF SPdsloop
+PUBLIC SPDeleteSpr
+GLOBAL _u_free
+PUBLIC SPdsloop
 
 ; DeleteSpr 
 ;

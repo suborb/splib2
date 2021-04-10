@@ -13,7 +13,7 @@
 void *sp_CreateGenericISR(void *addr)
 {
 #asm
-   LIB SPCreateGenericISR
+   EXTERN SPCreateGenericISR
 
    pop hl
    pop de

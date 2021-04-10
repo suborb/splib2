@@ -1,6 +1,6 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 
-XLIB SPtmxsetup
+PUBLIC SPtmxsetup
 
 .SPtmxsetup
    ld a,7

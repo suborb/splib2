@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; IM2 Interrupt Initialization
 ; Alvin Albrecht 01.2003
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPInitIM2
+PUBLIC SPInitIM2
 
 ; Init IM2
 ;

@@ -10,10 +10,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_TileArray(uchar c, void *addr)
+void *sp_TileArray(uint8_t c, void *addr)
 {
 #asm
-   LIB SPTileEntry
+   EXTERN SPTileEntry
 
    ld hl,2
    add hl,sp

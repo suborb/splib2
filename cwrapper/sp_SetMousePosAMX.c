@@ -11,11 +11,11 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_SetMousePosAMX(uint xcoord, uchar ycoord)
+void sp_SetMousePosAMX(uint16_t xcoord, uint8_t ycoord)
 {
 #asm
    INCLUDE "SPconfig.def"
-   LIB SPSetMousePosAMX
+   EXTERN SPSetMousePosAMX
 
    ld hl,2
    add hl,sp

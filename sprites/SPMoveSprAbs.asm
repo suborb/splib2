@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; MoveSprAbs
 ; Alvin Albrecht 2002
@@ -7,10 +7,10 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPMoveSprAbs
-XDEF SPMoveSprAbsC, SPMoveSprAbsNC
-LIB SPInvalidate, SPDisplayList, SPNullSprPtr, SPCompNullSprPtr
-XREF SPInvalidateP
+PUBLIC SPMoveSprAbs
+PUBLIC SPMoveSprAbsC, SPMoveSprAbsNC
+EXTERN SPInvalidate, SPDisplayList, SPNullSprPtr, SPCompNullSprPtr
+GLOBAL SPInvalidateP
 defw SPInvalidate
 
 ; MoveSprAbs 

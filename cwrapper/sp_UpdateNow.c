@@ -14,7 +14,7 @@
 void sp_UpdateNow(void)
 {
 #asm
-   LIB SPUpdateNow
+   EXTERN SPUpdateNow
 
    call SPUpdateNow
 #endasm

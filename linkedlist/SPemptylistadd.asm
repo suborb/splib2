@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; SPemptylistadd Helper Function
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPemptylistadd
+PUBLIC SPemptylistadd
 
 ; enter: hl = LIST.count+1
 ;        de = new NODE.next

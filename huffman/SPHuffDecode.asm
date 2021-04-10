@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Static Huffman Decoder
 ; Alvin Albrecht 03.2003
 ;
 
-XLIB SPHuffDecode
+PUBLIC SPHuffDecode
 
 ; enter: hl = root of decoder tree
 ;        de = memory address of encoded message

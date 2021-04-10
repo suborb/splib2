@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION rodata_splib2
 ;
 ; Key Translation table
 ; Alvin Albrecht 2002
 ;
 
-XLIB SPkeytranstbl
+PUBLIC SPkeytranstbl
 
 ; This table translates key presses into ascii codes.
 ; Used by 'GetKey' and 'LookupKey'.  An effort has been made for this

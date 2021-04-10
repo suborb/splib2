@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_Border(uchar colour)
+void sp_Border(uint8_t colour)
 {
 #asm
-   LIB SPBorder
+   EXTERN SPBorder
 
    ld hl,2
    add hl,sp

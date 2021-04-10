@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; CompDListAddr
 ; Alvin Albrecht 01.2003
@@ -6,8 +6,8 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPCompDListAddr
-LIB SPDisplayList
+PUBLIC SPCompDListAddr
+EXTERN SPDisplayList
 
 ; Compute display list address corresponding to a specific
 ; character coordinate.

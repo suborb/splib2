@@ -18,7 +18,7 @@ int sp_ListPrepend(struct sp_List *list, void *item)
    node = u_malloc(sizeof(struct sp_ListNode));
 
 #asm
-   LIB SPListPrepend
+   EXTERN SPListPrepend
 
    pop hl          ; hl = node
    ld a,h

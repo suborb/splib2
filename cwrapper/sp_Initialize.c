@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_Initialize(uchar colour, uchar graphic)
+void sp_Initialize(uint8_t colour, uint8_t graphic)
 {
 #asm
-   LIB SPInitialize
+   EXTERN SPInitialize
 
    ld hl,2
    add hl,sp

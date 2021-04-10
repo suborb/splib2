@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Validate Rectangle
 ; Alvin Albrecht 01.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPValidate
-XDEF SPValidateP
-LIB SPIntRect, SPCompDirtyAddr, SPbitleft2mask, SPbitright2mask
+PUBLIC SPValidate
+PUBLIC SPValidateP
+EXTERN SPIntRect, SPCompDirtyAddr, SPbitleft2mask, SPbitright2mask
 
 
 ; Validate Rectangle

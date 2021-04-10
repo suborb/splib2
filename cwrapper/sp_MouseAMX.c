@@ -11,11 +11,11 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_MouseAMX(uint *xcoord, uchar *ycoord, uchar *buttons)
+void sp_MouseAMX(uint16_t *xcoord, uint8_t *ycoord, uint8_t *buttons)
 {
 #asm
    INCLUDE "SPconfig.def"
-   LIB SPMouseAMX
+   EXTERN SPMouseAMX
 
    ld hl,2
    add hl,sp

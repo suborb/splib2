@@ -1,0 +1,7 @@
+SECTION code_splib2
+PUBLIC sp_HeapExtract_callee
+PUBLIC _sp_HeapExtract_callee
+EXTERN adt_HeapExtract_callee
+
+defc sp_HeapExtract_callee = adt_HeapExtract_callee
+defc _sp_HeapExtract_callee = adt_HeapExtract_callee

@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uint sp_ScreenStr(uchar row, uchar col)
+uint16_t sp_ScreenStr(uint8_t row, uint8_t col)
 {
 #asm
-   LIB SPScreenStr
+   EXTERN SPScreenStr
 
    ld hl,2
    add hl,sp

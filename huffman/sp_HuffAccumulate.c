@@ -5,7 +5,7 @@
 
 #include "spritepack.h"
 
-void sp_HuffAccumulate(struct sp_HuffmanCodec *hc, uchar c)
+void sp_HuffAccumulate(struct sp_HuffmanCodec *hc, uint8_t c)
 {
    (hc->u.heap[c])->u.freq++;
 }

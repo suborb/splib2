@@ -1,8 +1,8 @@
-SECTION code_temp_sp1
+SECTION bss_splib2
 
 INCLUDE "SPconfig.def"
 
-XLIB SPDisplayList
+PUBLIC SPDisplayList
 
 .SPDisplayList
 IF DISP_HIRES

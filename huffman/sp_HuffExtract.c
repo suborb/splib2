@@ -22,7 +22,7 @@ void traverseHuffTree(struct sp_HuffmanJoin *hj, struct sp_HuffmanLeaf **heap)
    traverseHuffTree(hj->right, heap);
 }
 
-int sp_HuffExtract(struct sp_HuffmanCodec *hc, uint n)
+int sp_HuffExtract(struct sp_HuffmanCodec *hc, uint16_t n)
 {
    struct sp_HuffmanLeaf **heap;
    struct sp_HuffmanJoin *hj1, *hj2, *hj3;

@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void ListInsert(LIST *list, void *item, uchar nodeQueue)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListInsert
-LIB SPListAdd, SPListPrev
+PUBLIC SPListInsert
+EXTERN SPListAdd, SPListPrev
 
 ; enter: de = LIST *
 ;        bc = item *

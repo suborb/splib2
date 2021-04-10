@@ -5,10 +5,10 @@
 
 #include "spritepack.h"
 
-void sp_HuffEncode(struct sp_HuffmanCodec *hc, uchar c)
+void sp_HuffEncode(struct sp_HuffmanCodec *hc, uint8_t c)
 {
 #asm
-   LIB SPHuffEncode
+   EXTERN SPHuffEncode
 
    ld hl,2
    add hl,sp

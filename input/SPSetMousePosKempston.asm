@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Kempston Mouse Position
 ; Alvin Albrecht 02.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPSetMousePosKempston
-LIB SPMouseKempston
-XREF SPKEMPX, SPKEMPY
+PUBLIC SPSetMousePosKempston
+EXTERN SPMouseKempston
+GLOBAL SPKEMPX, SPKEMPY
 
 ; Set Position for Kempston Mouse
 ;

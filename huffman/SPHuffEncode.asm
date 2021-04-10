@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Static Huffman Encoder
 ; Alvin Albrecht 03.2003
 ;
 
-XLIB SPHuffEncode
+PUBLIC SPHuffEncode
 
 ; enter: hl = addr of encoder array (array indexed by symbols pointing at decoder tree leaves)
 ;         c = symbol to encode

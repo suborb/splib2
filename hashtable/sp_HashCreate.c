@@ -13,7 +13,10 @@
 #include <stdlib.h>
 #include "spritepack.h"
 
-struct sp_HashTable *sp_HashCreate(uint size, void *hashfunc, void *match, void *delete)
+struct sp_HashTable *sp_HashCreate(uint16_t size, 
+            uint16_t (*hashfunc)(void *key, uint16_t size), 
+            int (*match)(void *key1, void *key2),
+            void (*delete)(struct sp_HashCell *hc))
 {
    struct sp_HashTable *ht;
 

@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uint sp_ListCount(struct sp_List *list)
+uint16_t sp_ListCount(struct sp_List *list)
 {
 #asm
-   LIB SPListCount
+   EXTERN SPListCount
 
    ld hl,2
    add hl,sp

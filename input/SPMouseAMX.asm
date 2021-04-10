@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; AMX Mouse
 ; Alvin Albrecht 01.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPMouseAMX
-LIB SPMouseAMXInit, SPtbllookup
-XREF SPAMXxcoord, SPAMXycoord
+PUBLIC SPMouseAMX
+EXTERN SPMouseAMXInit, SPtbllookup
+GLOBAL SPAMXxcoord, SPAMXycoord
 defw SPMouseAMXInit
 
 ; Mouse AMX

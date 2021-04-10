@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_Wait(uint ticks)
+void sp_Wait(uint16_t ticks)
 {
 #asm
-   LIB SPWait
+   EXTERN SPWait
 
    pop hl
    pop bc

@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Clear Rectangle
 ; Alvin Albrecht 01.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPClearRect
-XDEF SPClearRectP
-LIB SPCompDListAddr
+PUBLIC SPClearRect
+PUBLIC SPClearRectP
+EXTERN SPCompDListAddr
 
 ; Clear Rectangle
 ;

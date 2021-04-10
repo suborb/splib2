@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_GetCharAddr(uchar row, uchar col)
+void *sp_GetCharAddr(uint8_t row, uint8_t col)
 {
 #asm
-   LIB SPGetCharAddr
+   EXTERN SPGetCharAddr
 
    ld hl,2
    add hl,sp

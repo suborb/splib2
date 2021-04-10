@@ -14,7 +14,7 @@
 void *sp_ListLast(struct sp_List *list)
 {
 #asm
-   LIB SPListLast
+   EXTERN SPListLast
 
    ld hl,2
    add hl,sp

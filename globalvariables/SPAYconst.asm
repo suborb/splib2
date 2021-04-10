@@ -1,9 +1,9 @@
-SECTION code_temp_sp1
+SECTION data_splib2
 
 INCLUDE "SPconfig.def"
 
-XLIB SPAYReg
-XDEF SPAYData
+PUBLIC SPAYReg
+PUBLIC SPAYData
 
 .SPAYReg
    defw AYREG_DEFAULT

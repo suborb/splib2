@@ -5,7 +5,7 @@
 
 #include "spritepack.h"
 
-void *sp_HuffGetState(struct sp_HuffmanCodec *hc, uchar *bit)
+void *sp_HuffGetState(struct sp_HuffmanCodec *hc, uint8_t *bit)
 {
    *bit = hc->bit;
    return hc->addr;

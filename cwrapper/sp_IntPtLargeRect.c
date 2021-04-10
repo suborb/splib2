@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-int sp_IntPtLargeRect(uint x, uint y, struct sp_LargeRect *r)
+int sp_IntPtLargeRect(uint16_t x, uint16_t y, struct sp_LargeRect *r)
 {
 #asm
-   LIB SPPtInLargeRect
+   EXTERN SPPtInLargeRect
 
    pop bc
    pop ix

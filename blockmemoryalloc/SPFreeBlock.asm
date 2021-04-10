@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Dynamic Block Memory Allocator
 ; Alvin Albrecht 2002
@@ -11,9 +11,9 @@ SECTION code_temp_sp1
 ;
 
 
-XLIB SPFreeBlock
-LIB SPqueuetable
-XDEF SPfb1, SPfb2
+PUBLIC SPFreeBlock
+EXTERN SPqueuetable
+PUBLIC SPfb1, SPfb2
 
 ; FreeBlock
 ;

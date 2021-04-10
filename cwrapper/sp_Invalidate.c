@@ -15,8 +15,8 @@
 void sp_Invalidate(struct sp_Rect *area, struct sp_Rect *clip)
 {
 #asm
-   LIB sp_fixcliprect, SPInvalidate
-   XREF SPInvalidateP
+   EXTERN sp_fixcliprect, SPInvalidate
+   GLOBAL SPInvalidateP
 
    ld hl,2
    add hl,sp

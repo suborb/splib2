@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_PrintString(struct sp_PSS *ps, uchar *s)
+void sp_PrintString(struct sp_PSS *ps, uint8_t *s)
 {
 #asm
-   LIB SPPrintString, sp_pssread, sp_psswrite
+   EXTERN SPPrintString, sp_pssread, sp_psswrite
 
    ld hl,2
    add hl,sp

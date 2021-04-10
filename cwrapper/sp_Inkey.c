@@ -11,11 +11,11 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uchar sp_Inkey(void)  /* returns ascii code, 0 if no key pressed */
+uint8_t sp_Inkey(void)  /* returns ascii code, 0 if no key pressed */
 {
 #asm
-   LIB SPGetKey
-   XREF SPInkey
+   EXTERN SPGetKey
+   GLOBAL SPInkey
 
    call SPInkey
    jr c, keyok

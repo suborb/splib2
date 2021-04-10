@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; GetCharAddr
 ; Alvin Albrecht 2002
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPGetCharAddr
+PUBLIC SPGetCharAddr
 
 ; Get Character Address
 ;

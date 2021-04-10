@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; MultDEA
 ; Alvin Albrecht 2002
 ;
 
-XLIB SPMultDEA
+PUBLIC SPMultDEA
 
 ; Multiply 16 by 8
 ;

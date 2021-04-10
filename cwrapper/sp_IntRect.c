@@ -15,7 +15,7 @@ int sp_IntRect(struct sp_Rect *r1, struct sp_Rect *r2, struct sp_Rect *result)
 /* zero return = no overlap or use "iferror(...)" */
 {
 #asm
-   LIB sp_fixcliprect, SPIntRect
+   EXTERN sp_fixcliprect, SPIntRect
 
    ld hl,7
    add hl,sp

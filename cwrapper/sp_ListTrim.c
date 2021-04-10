@@ -14,7 +14,7 @@
 void *sp_ListTrim(struct sp_List *list)
 {
 #asm
-   LIB SPListTrim
+   EXTERN SPListTrim
 
    pop bc
    pop hl

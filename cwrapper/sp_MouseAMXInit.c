@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_MouseAMXInit(uchar xvector, uchar yvector)
+void sp_MouseAMXInit(uint8_t xvector, uint8_t yvector)
 {
 #asm
-   LIB SPMouseAMXInit
+   EXTERN SPMouseAMXInit
 
    ld hl,2
    add hl,sp

@@ -14,7 +14,7 @@
 void *sp_ListPrev(struct sp_List *list)
 {
 #asm
-   LIB SPListPrev
+   EXTERN SPListPrev
 
    ld hl,2
    add hl,sp

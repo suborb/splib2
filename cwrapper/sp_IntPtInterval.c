@@ -10,10 +10,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-int sp_IntPtInterval(uint x, struct sp_Interval *i)
+int sp_IntPtInterval(uint16_t x, struct sp_Interval *i)
 {
 #asm
-   LIB SPPtInIval
+   EXTERN SPPtInIval
 
    pop bc
    pop hl

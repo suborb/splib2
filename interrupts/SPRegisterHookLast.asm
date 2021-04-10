@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Register hook at end of list
 ; Alvin Albrecht 01.2003
@@ -6,10 +6,10 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPRegisterHookLast
-XDEF SPRegisterHook
-LIB SPCreateGenericISR
-XREF GENERICLISTDISP
+PUBLIC SPRegisterHookLast
+PUBLIC SPRegisterHook
+EXTERN SPCreateGenericISR
+GLOBAL GENERICLISTDISP
 defw SPCreateGenericISR
 
 ; For use with the Generic ISR.  Installs a hook at the end of

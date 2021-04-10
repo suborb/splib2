@@ -1,12 +1,12 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Initialize Sprite Pack's Background Tile & Sprite Module
 ; Alvin Albrecht 06.2003
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPInitialize
-LIB SPDisplayList, SPDirtyChars, SPTileArray
+PUBLIC SPInitialize
+EXTERN SPDisplayList, SPDirtyChars, SPTileArray
 
 ; Initialize
 ;

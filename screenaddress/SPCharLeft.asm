@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; CharLeft
 ; Alvin Albrecht 2002
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPCharLeft
+PUBLIC SPCharLeft
 
 ; Char Left
 ;

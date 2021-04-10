@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 
 ;
 ;      Sprite Pack V2.2
@@ -9,7 +9,7 @@ SECTION code_temp_sp1
 ;      Alvin Albrecht 06.2003
 ;
 
-XLIB sp_psswrite
+PUBLIC sp_psswrite
 
 ; Store registers into "struct sp_PSS" pointed at by hl
 

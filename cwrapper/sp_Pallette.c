@@ -10,10 +10,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_Pallette(uchar c, void *addr)
+void *sp_Pallette(uint8_t c, void *addr)
 {
 #asm
-   LIB SPPallette
+   EXTERN SPPallette
 
    ld hl,2
    add hl,sp

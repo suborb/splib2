@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; IterateSprChar
 ; Alvin Albrecht 2002
 ;
 
-XLIB SPIterateSprChar
+PUBLIC SPIterateSprChar
 
 ; IterateSprChar 
 ;

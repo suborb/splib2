@@ -14,8 +14,8 @@
 void sp_MoveSprRelC(struct sp_SS *sprite, struct sp_Rect *clip, int animate, char rel_row, char rel_col, char rel_hpix, char rel_vpix)
 {
 #asm
-   LIB sp_moveabshelp, SPMoveSprRel
-   XREF SPMoveSprRelC
+   EXTERN sp_moveabshelp, SPMoveSprRel
+   GLOBAL SPMoveSprRelC
 
    call sp_moveabshelp   ; parse parameters -- cheat: same parameter types as MoveSprAbs
    call SPMoveSprRelC

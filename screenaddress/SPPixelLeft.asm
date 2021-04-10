@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; PixelLeft
 ; Alvin Albrecht 06.2003
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPPixelLeft
+PUBLIC SPPixelLeft
 
 ; Pixel Left
 ;

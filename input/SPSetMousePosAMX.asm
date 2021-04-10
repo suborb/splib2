@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; AMX Mouse Position
 ; Alvin Albrecht 02.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPSetMousePosAMX
-LIB SPMouseAMXInit
-XREF SPAMXxcoord, SPAMXycoord
+PUBLIC SPSetMousePosAMX
+EXTERN SPMouseAMXInit
+GLOBAL SPAMXxcoord, SPAMXycoord
 defw SPMouseAMXInit
 
 ; Set Position for AMX Mouse

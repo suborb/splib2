@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 
 ;
 ;      Sprite Pack V2.0
@@ -9,7 +9,7 @@ SECTION code_temp_sp1
 ;      Alvin Albrecht 01.2003
 ;
 
-XLIB sp_fixcliprect
+PUBLIC sp_fixcliprect
 
 ; Converts a sp_Rect pointed at by de into a ClipStruct point at by iy,
 ; the latter is expected by the assembly API.

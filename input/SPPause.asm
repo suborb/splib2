@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Pause
 ; Alvin Albrecht 06.2003
 ;
 
-XLIB SPPause
+PUBLIC SPPause
 
 ; Simulates the Basic Pause command.
 ;

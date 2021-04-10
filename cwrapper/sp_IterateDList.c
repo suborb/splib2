@@ -14,7 +14,7 @@
 void sp_IterateDList(struct sp_Rect *r, void *hook)
 {
 #asm
-   LIB SPIterateDList
+   EXTERN SPIterateDList
 
    pop hl
    pop iy

@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_BlockAlloc(uchar queue)
+void *sp_BlockAlloc(uint8_t queue)
 {
 #asm
-   LIB SPBlockAlloc
+   EXTERN SPBlockAlloc
 
    ld hl,2
    add hl,sp

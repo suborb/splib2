@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Create Generic ISR
 ; Alvin Albrecht 01.2003
@@ -15,8 +15,8 @@ SECTION code_temp_sp1
 ; without calling further hooks down the chain.
 
 
-XLIB SPCreateGenericISR
-XDEF GENERICISRSIZE, GENERICLISTDISP
+PUBLIC SPCreateGenericISR
+PUBLIC GENERICISRSIZE, GENERICLISTDISP
 
 ; Create Generic ISR
 ;

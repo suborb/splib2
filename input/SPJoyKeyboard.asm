@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; JoyKeyboard
 ; Alvin Albrecht 2002
@@ -22,7 +22,7 @@ SECTION code_temp_sp1
 ; exit :   a = F111RLDU active low
 ; uses :   af,bc,de,hl
 
-XLIB SPJoyKeyboard
+PUBLIC SPJoyKeyboard
 
 .SPJoyKeyboard
    ld bc,$f7ff          ; b = doing R, c = F111RLDU inactive (active low)

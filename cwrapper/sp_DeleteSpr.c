@@ -14,7 +14,7 @@
 void sp_DeleteSpr(struct sp_SS *sprite)
 {
 #asm
-   LIB SPDeleteSpr
+   EXTERN SPDeleteSpr
 
    ld hl,2
    add hl,sp

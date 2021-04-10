@@ -15,8 +15,8 @@
 void sp_Validate(struct sp_Rect *area, struct sp_Rect *clip)
 {
 #asm
-   LIB sp_fixcliprect, SPValidate
-   XREF SPValidateP
+   EXTERN sp_fixcliprect, SPValidate
+   GLOBAL SPValidateP
 
    ld hl,2
    add hl,sp

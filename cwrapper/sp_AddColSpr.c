@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-int sp_AddColSpr(struct sp_SS *sprite, void *graphic, uchar extra)
+int sp_AddColSpr(struct sp_SS *sprite, void *graphic, uint8_t extra)
 {
 #asm
-   LIB SPAddColSpr
+   EXTERN SPAddColSpr
 
    ld hl,2
    add hl,sp

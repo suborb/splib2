@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; JoyTimexRight
 ; Alvin Albrecht 2002
@@ -6,8 +6,8 @@ SECTION code_temp_sp1
 ; Reads right TS2068 joystick.
 ;
 
-XLIB SPJoyTimexRight
-LIB SPtmxsetup
+PUBLIC SPJoyTimexRight
+EXTERN SPtmxsetup
 
 ; JoyTimex1 
 ;

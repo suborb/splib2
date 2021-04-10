@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uchar sp_JoyKempston(void)
+uint8_t sp_JoyKempston(void)
 {
 #asm
-   LIB SPJoyKempston
+   EXTERN SPJoyKempston
 
    call SPJoyKempston
    ld l,a

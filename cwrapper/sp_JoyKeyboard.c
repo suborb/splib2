@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uchar sp_JoyKeyboard(struct sp_UDK *keys)
+uint8_t sp_JoyKeyboard(struct sp_UDK *keys)
 {
 #asm
-   LIB SPJoyKeyboard
+   EXTERN SPJoyKeyboard
 
    ld hl,2
    add hl,sp

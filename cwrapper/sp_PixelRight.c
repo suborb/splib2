@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_PixelRight(void *scrnaddr, uchar *mask)
+void *sp_PixelRight(void *scrnaddr, uint8_t *mask)
 {
 #asm
-   LIB SPPixelRight
+   EXTERN SPPixelRight
 
    ld hl,2
    add hl,sp

@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void *ListRemove(LIST *list)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListRemove
-XREF _u_free
+PUBLIC SPListRemove
+GLOBAL _u_free
 
 ; enter: hl = LIST *
 ; exit : no carry = list empty or current is not INLIST

@@ -18,7 +18,7 @@ struct sp_List *sp_ListCreate(void)
    ls = u_malloc(sizeof(struct sp_List));
 
 #asm
-   LIB SPListCreate
+   EXTERN SPListCreate
 
    pop hl               ; hl = ls
    ld a,h

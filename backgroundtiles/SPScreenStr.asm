@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; ScreenStr
 ; Alvin Albrecht 01.2003
 ;
 
-XLIB SPScreenStr
-LIB SPCompDListAddr
+PUBLIC SPScreenStr
+EXTERN SPCompDListAddr
 
 ; Return background tile occupying a specific character coordinate
 ;

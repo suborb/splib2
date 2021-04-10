@@ -11,11 +11,11 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_MouseKempston(uint *xcoord, uchar *ycoord, uchar *buttons)
+void sp_MouseKempston(uint16_t *xcoord, uint8_t *ycoord, uint8_t *buttons)
 {
 #asm
    INCLUDE "SPconfig.def"
-   LIB SPMouseKempston
+   EXTERN SPMouseKempston
 
    ld hl,2
    add hl,sp

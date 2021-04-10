@@ -1,7 +1,7 @@
-SECTION code_temp_sp1
+SECTION data_splib2
 
 INCLUDE "SPconfig.def"
-XLIB SPClipStruct
+PUBLIC SPClipStruct
 
 .SPClipStruct
    defb 0,SP_ROWEND-SP_ROWSTART

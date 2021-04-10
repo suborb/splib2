@@ -12,10 +12,10 @@
 #include "spritepack.h"
 
 /* returns no carry if success */
-struct sp_SS *sp_CreateSpr(uchar type, uchar rows, void *graphic, uchar plane, uchar extra)
+struct sp_SS *sp_CreateSpr(uint8_t type, uint8_t rows, void *graphic, uint8_t plane, uint8_t extra)
 {
 #asm
-   LIB SPCreateSpr
+   EXTERN SPCreateSpr
 
    ld hl,2
    add hl,sp         ; hl points past ret address

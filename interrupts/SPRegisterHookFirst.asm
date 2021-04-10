@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Register hook at front of list
 ; Alvin Albrecht 01.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPRegisterHookFirst
-LIB SPCreateGenericISR
-XREF GENERICLISTDISP
+PUBLIC SPRegisterHookFirst
+EXTERN SPCreateGenericISR
+GLOBAL GENERICLISTDISP
 defw SPCreateGenericISR
 
 ; For use with the Generic ISR.  Installs a hook at the front of

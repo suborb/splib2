@@ -7,7 +7,7 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uchar sp_inp(uint port)
+uint8_t sp_inp(uint16_t port)
 {
 #asm
    ld hl,2

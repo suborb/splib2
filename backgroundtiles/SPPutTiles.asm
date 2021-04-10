@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Put Background Tiles
 ; Alvin Albrecht 07.2003
@@ -6,8 +6,8 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPPutTiles
-LIB SPCompDListAddr
+PUBLIC SPPutTiles
+EXTERN SPCompDListAddr
 
 ; Get Background Tiles
 ;

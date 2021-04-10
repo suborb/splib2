@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uchar sp_JoyTimexRight(void)
+uint8_t sp_JoyTimexRight(void)
 {
 #asm
-   LIB SPJoyTimexRight
+   EXTERN SPJoyTimexRight
 
    call SPJoyTimexRight
    ld l,a

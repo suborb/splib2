@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Key Pressed?
 ; Alvin Albrecht 01.2003
 ;
 
-XLIB SPKeyPressed
+PUBLIC SPKeyPressed
 
 ; Determines if a key is pressed using the scan code
 ; returned by "LookupKey".

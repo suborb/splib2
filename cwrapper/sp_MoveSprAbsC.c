@@ -11,11 +11,11 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_MoveSprAbsC(struct sp_SS *sprite, struct sp_Rect *clip, int animate, uchar row, uchar col, uchar hpix, uchar vpix)
+void sp_MoveSprAbsC(struct sp_SS *sprite, struct sp_Rect *clip, int animate, uint8_t row, uint8_t col, uint8_t hpix, uint8_t vpix)
 {
 #asm
-   LIB sp_moveabshelp, SPMoveSprAbs
-   XREF SPMoveSprAbsC
+   EXTERN sp_moveabshelp, SPMoveSprAbs
+   GLOBAL SPMoveSprAbsC
 
    call sp_moveabshelp   ; parse parameters
    call SPMoveSprAbsC

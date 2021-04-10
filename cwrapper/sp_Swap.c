@@ -6,10 +6,10 @@
 
 #include "spritepack.h"
 
-void sp_Swap(void *addr1, void *addr2, uint bytes)
+void sp_Swap(void *addr1, void *addr2, uint16_t bytes)
 {
 #asm
-   LIB SPSwap
+   EXTERN SPSwap
 
    ld hl,2
    add hl,sp

@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void *ListLast(LIST *list)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListLast
+PUBLIC SPListLast
 
 ; enter: hl = LIST *
 ; exit : no carry = list empty

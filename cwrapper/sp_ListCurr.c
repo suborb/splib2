@@ -14,7 +14,7 @@
 void *sp_ListCurr(struct sp_List *list)
 {
 #asm
-   LIB SPListCurr
+   EXTERN SPListCurr
 
    ld hl,2
    add hl,sp

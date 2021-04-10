@@ -11,11 +11,11 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_SetMousePosSim(struct sp_UDM *m, uint xcoord, uchar ycoord)
+void sp_SetMousePosSim(struct sp_UDM *m, uint16_t xcoord, uint8_t ycoord)
 {
 #asm
    INCLUDE "SPconfig.def"
-   LIB SPSetMousePosSim
+   EXTERN SPSetMousePosSim
 
    ld hl,2
    add hl,sp

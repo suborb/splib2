@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uchar sp_JoySinclair1(void)
+uint8_t sp_JoySinclair1(void)
 {
 #asm
-   LIB SPJoySinclair1
+   EXTERN SPJoySinclair1
 
    call SPJoySinclair1
    ld l,a

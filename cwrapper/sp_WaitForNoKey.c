@@ -14,7 +14,7 @@
 void sp_WaitForNoKey(void)
 {
 #asm
-   LIB SPWaitForNoKey
+   EXTERN SPWaitForNoKey
 
    call SPWaitForNoKey
 #endasm

@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 
 ; Fast Unsigned Multiply
 ; Thanks to Nick Fleming for the code.
@@ -19,7 +19,7 @@ SECTION code_temp_sp1
 ;	Based on the excellent multiply routines
 ;	found in Rodney Zaks "Programming the z80" (Sybex)
 
-XLIB SPMultUnsigned
+PUBLIC SPMultUnsigned
 
 .SPMultUnsigned
    ld hl,0

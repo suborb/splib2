@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uint sp_LookupKey(uchar c)  /* use "iferror(..)" to see if code not found */
+uint16_t sp_LookupKey(uint8_t c)  /* use "iferror(..)" to see if code not found */
 {
 #asm
-   LIB SPLookupKey
+   EXTERN SPLookupKey
 
    ld hl,2
    add hl,sp

@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Kempston Mouse
 ; Based on Chris Cowley's Basic Mouse Driver code <ccowley@grok.co.uk>
@@ -6,8 +6,8 @@ SECTION code_temp_sp1
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPMouseKempston
-XDEF SPKEMPX, SPKEMPY
+PUBLIC SPMouseKempston
+PUBLIC SPKEMPX, SPKEMPY
 
 ;
 ; Local Statics

@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uint sp_BlockCount(uchar queue)
+uint16_t sp_BlockCount(uint8_t queue)
 {
 #asm
-   LIB SPBlockCount
+   EXTERN SPBlockCount
 
    ld hl,2
    add hl,sp

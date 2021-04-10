@@ -5,7 +5,7 @@
 
 #include "spritepack.h"
 
-void sp_HuffSetState(struct sp_HuffmanCodec *hc, void *addr, uchar bit)
+void sp_HuffSetState(struct sp_HuffmanCodec *hc, void *addr, uint8_t bit)
 {
    hc->bit = bit;
    hc->addr = addr;

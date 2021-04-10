@@ -1,21 +1,21 @@
+;/*
+; *      Sprite Pack V2.0
+; *
+; *      Spectrum and Timex Computers Game Engine
+; *      Visit http://justme895.tripod.com/main.htm
+; *
+; *      Alvin Albrecht 01.2003
+; */
 
-/*
- *      Sprite Pack V2.0
- *
- *      Spectrum and Timex Computers Game Engine
- *      Visit http://justme895.tripod.com/main.htm
- *
- *      Alvin Albrecht 01.2003
- */
+SECTION code_splib2
+PUBLIC sp_ListSearch
+PUBLIC _sp_ListSearch
+EXTERN SPListSearch
 
-#define _SPLIB
-#include "spritepack.h"
+;void *sp_ListSearch(struct sp_List *list, void *match, void *item1)
 
-void *sp_ListSearch(struct sp_List *list, void *match, void *item1)
-{
-#asm
-   LIB SPListSearch
-
+sp_ListSearch:
+_sp_ListSearch:
    ld hl,2
    add hl,sp
    ld e,(hl)
@@ -35,14 +35,11 @@ void *sp_ListSearch(struct sp_List *list, void *match, void *item1)
    ex de,hl
    ret nc
    ld hl,0
-#endasm
-}
+   ret
 
-/*
 ; enter: hl = list
 ;        de = item1
 ;        bc = match
 ; exit : no carry = item not found, current points past end of list
 ;        de = item found
 ;        current points at found item
-*/

@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_GetScrnAddr(uint xcoord, uchar ycoord, uchar *mask)
+void *sp_GetScrnAddr(uint16_t xcoord, uint8_t ycoord, uint8_t *mask)
 {
 #asm
-   LIB SPGetScrnAddr
+   EXTERN SPGetScrnAddr
 
    ld hl,7
    add hl,sp

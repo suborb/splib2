@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; AMX Mouse Initialization
 ; Alvin Albrecht 01.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPMouseAMXInit
-XDEF SPAMXDX, SPAMXDY, SPAMXxcoord, SPAMXycoord
-LIB SPInstallISR
+PUBLIC SPMouseAMXInit
+PUBLIC SPAMXDX, SPAMXDY, SPAMXxcoord, SPAMXycoord
+EXTERN SPInstallISR
 
 ; References:
 ;   1. http://www.breezer.demon.co.uk/spec/tech/hware.html

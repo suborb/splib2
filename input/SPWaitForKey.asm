@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; WaitForKey
 ; Alvin Albrecht 2002
@@ -7,7 +7,7 @@ SECTION code_temp_sp1
 ;
 ; uses: af
 
-XLIB SPWaitForKey
+PUBLIC SPWaitForKey
 
 .SPWaitForKey
    xor a

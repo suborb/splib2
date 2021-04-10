@@ -1,7 +1,7 @@
-SECTION code_temp_sp1
+SECTION data_splib2
 
 INCLUDE "SPconfig.def"
-XLIB SPNullSprPtr
+PUBLIC SPNullSprPtr
 
 IF DISP_HICOLOUR
 .SPNullSprPtr

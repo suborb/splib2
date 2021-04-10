@@ -14,7 +14,7 @@
 void *sp_CharUp(void *scrnaddr)
 {
 #asm
-   LIB SPCharUp
+   EXTERN SPCharUp
 
    ld hl,2
    add hl,sp

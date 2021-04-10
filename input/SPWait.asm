@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Wait
 ; Alvin Albrecht 06.2003
 ;
 
-XLIB SPWait
+PUBLIC SPWait
 
 ; Waits a Fixed Period of Time
 ;

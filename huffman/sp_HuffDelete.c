@@ -18,7 +18,7 @@ void traverseTree(struct sp_HuffmanJoin *hj)
 
 void sp_HuffDelete(struct sp_HuffmanCodec *hc)
 {
-   uint i;
+   uint16_t i;
 
    if (hc->root) {
       traverseTree(hc->root);

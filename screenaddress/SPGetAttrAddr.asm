@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; GetAttrAddr
 ; Alvin Albrecht 2002
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPGetAttrAddr
+PUBLIC SPGetAttrAddr
 
 ; Get Attribute Address
 ;

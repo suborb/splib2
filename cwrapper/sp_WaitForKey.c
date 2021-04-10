@@ -14,7 +14,7 @@
 void sp_WaitForKey(void)
 {
 #asm
-   LIB SPWaitForKey
+   EXTERN SPWaitForKey
 
    call SPWaitForKey
 #endasm

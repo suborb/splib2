@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; LIST *ListCreate(uchar listQueue)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListCreate
-XDEF SPzerolist
+PUBLIC SPListCreate
+PUBLIC SPzerolist
 
 ; enter: de = address of new sp_List container
 ; exit : hl = LIST*

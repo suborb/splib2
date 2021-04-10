@@ -14,7 +14,7 @@
 void *sp_GetAttrAddr(void *scrnaddr)
 {
 #asm
-   LIB SPGetAttrAddr
+   EXTERN SPGetAttrAddr
 
    ld hl,2
    add hl,sp

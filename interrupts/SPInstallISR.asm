@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Install ISR
 ; Alvin Albrecht 01.2003
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPInstallISR
+PUBLIC SPInstallISR
 
 ; Simply stores ISR address into interrupt vector table.
 ;

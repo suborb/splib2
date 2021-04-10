@@ -14,7 +14,7 @@
 void sp_PutTiles(struct sp_Rect *r, void *src)
 {
 #asm
-   LIB SPPutTiles
+   EXTERN SPPutTiles
 
    ld hl,2
    add hl,sp

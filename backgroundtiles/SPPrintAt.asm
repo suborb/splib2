@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; PrintAt
 ; Alvin Albrecht 01.2003
 ;
 
-XLIB SPPrintAt
-LIB SPCompDListAddr
+PUBLIC SPPrintAt
+EXTERN SPCompDListAddr
 
 ; Print Background Bitmap at Character Position, no invalidation
 ;

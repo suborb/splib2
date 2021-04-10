@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-int sp_PFill(uint xcoord, uchar ycoord, void *pattern, uint stackdepth)
+int sp_PFill(uint16_t xcoord, uint8_t ycoord, void *pattern, uint16_t stackdepth)
 {
 #asm
-   LIB SPPFill
+   EXTERN SPPFill
 
    ld hl,2
    add hl,sp

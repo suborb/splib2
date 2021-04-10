@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; GetKey
 ; Alvin Albrecht 2002
@@ -19,10 +19,10 @@ SECTION code_temp_sp1
 ; at by "SPkeytranstbl".
 ;
 
-XLIB SPGetKey
-LIB SPkeytranstbl, SPtbllookup
-XDEF SPInkey
-XDEF SPkeydebounce, SPkeystartrepeat, SPkeyrepeatperiod
+PUBLIC SPGetKey
+EXTERN SPkeytranstbl, SPtbllookup
+PUBLIC SPInkey
+PUBLIC SPkeydebounce, SPkeystartrepeat, SPkeyrepeatperiod
 
 ;
 ; Local Static Variables

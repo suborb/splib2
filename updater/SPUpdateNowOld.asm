@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Update Now
 ; Alvin Albrecht 07.2003
@@ -58,11 +58,11 @@ SECTION code_temp_sp1
 ; be useable as or/xor/load sprite definitions.
 
 INCLUDE "SPconfig.def"
-XLIB SPUpdateNow
-LIB SPDisplayList, SPDirtyChars, SPTileArray
+PUBLIC SPUpdateNow
+EXTERN SPDisplayList, SPDirtyChars, SPTileArray
 
 IF DISP_TMXDUAL
-XDEF SPScreen
+PUBLIC SPScreen
 .SPScreen
    defb $20          ; indicates which display file to draw into ($20=secondary, 0=primary)
 ENDIF

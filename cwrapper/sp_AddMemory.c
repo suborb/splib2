@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_AddMemory(uchar queue, uchar number, uint size, void *addr)
+void *sp_AddMemory(uint8_t queue, uint8_t number, uint16_t size, void *addr)
 {
 #asm
-   LIB SPAddMemory
+   EXTERN SPAddMemory
 
    ld hl,8
    add hl,sp

@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; PrintAtDiff
 ; Alvin Albrecht 01.2003
 ;
 
-XLIB SPPrintAtDiff
-LIB SPCompDListAddr, SPCompDirtyAddr, SPbit2mask, SPtbllookup
+PUBLIC SPPrintAtDiff
+EXTERN SPCompDListAddr, SPCompDirtyAddr, SPbit2mask, SPtbllookup
 
 ; Print Background Bitmap at Character Position, only invalidating
 ; if the background tile is actually changed.

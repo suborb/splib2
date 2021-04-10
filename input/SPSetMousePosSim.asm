@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Simulated Mouse Position
 ; Alvin Albrecht 06.2003
@@ -6,7 +6,7 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPSetMousePosSim
+PUBLIC SPSetMousePosSim
 
 ; Set Position for Simulated Mouse
 ;

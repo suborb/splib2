@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void *ListSearch(LIST *list, int (*match)(void *item1, void *item2), void *item1)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListSearch
-LIB SPListCurr, SPListNext
+PUBLIC SPListSearch
+EXTERN SPListCurr, SPListNext
 
 ; enter: hl = list
 ;        de = item1

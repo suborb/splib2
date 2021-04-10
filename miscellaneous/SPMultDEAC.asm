@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; MultDEAC
 ; Alvin Albrecht 2002
 ;
 
-XLIB SPMultDEAC
+PUBLIC SPMultDEAC
 
 ; Multiply 16 by 16
 ;

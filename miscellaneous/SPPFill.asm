@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; SPFill
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPPFill
-LIB SPGetScrnAddr, SPPixelUp, SPPixelDown, SPCharLeft, SPCharRight
+PUBLIC SPPFill
+EXTERN SPGetScrnAddr, SPPixelUp, SPPixelDown, SPCharLeft, SPCharRight
 
 ; Patterned Flood Fill
 ; Alvin Albrecht 2002

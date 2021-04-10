@@ -18,7 +18,7 @@ int sp_ListInsert(struct sp_List *list, void *item)
    node = u_malloc(sizeof(struct sp_ListNode));
 
 #asm
-   LIB SPListInsert
+   EXTERN SPListInsert
 
    pop hl          ; hl = node
    ld a,h

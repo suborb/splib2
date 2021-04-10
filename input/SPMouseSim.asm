@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ; Simulated Mouse
 ; Alvin Albrecht 06.2003
 
 INCLUDE "SPconfig.def"
 
-XLIB SPMouseSim
+PUBLIC SPMouseSim
 
 ; Simulated Mouse
 ;

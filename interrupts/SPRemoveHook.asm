@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Remove hook
 ; Alvin Albrecht 01.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPRemoveHook
-LIB SPCreateGenericISR
-XREF GENERICLISTDISP
+PUBLIC SPRemoveHook
+EXTERN SPCreateGenericISR
+GLOBAL GENERICLISTDISP
 defw SPCreateGenericISR
 
 ; For use with the Generic ISR.

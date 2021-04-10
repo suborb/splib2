@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; IntIvals
 ; Alvin Albrecht 03.2003
 ;
 
-XLIB SPIntIvals
-LIB SPPtInIval
+PUBLIC SPIntIvals
+EXTERN SPPtInIval
 
 ; Intersect Intervals
 ;

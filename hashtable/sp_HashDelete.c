@@ -13,7 +13,7 @@
 
 void sp_HashDelete(struct sp_HashTable *ht)
 {
-   uint i;
+   uint16_t i;
    struct sp_HashCell *temp, *ls;
 
    for (i=0; i != ht->size; i++) {

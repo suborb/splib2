@@ -13,7 +13,7 @@
 void sp_EmptyISR(void)
 {
 #asm
-   LIB SPEmptyISR
+   EXTERN SPEmptyISR
 
    jp SPEmptyISR
 #endasm

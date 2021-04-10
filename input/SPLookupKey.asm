@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; LookupKey
 ; Alvin Albrecht 01.2003
 ;
 
-XLIB SPLookupKey
-LIB SPkeytranstbl, SPbit2mask, SPtbllookup
+PUBLIC SPLookupKey
+EXTERN SPkeytranstbl, SPbit2mask, SPtbllookup
 
 ; Given the ascii code of a character, returns the scan row and mask
 ; corresponding to the key that needs to be pressed to generate the

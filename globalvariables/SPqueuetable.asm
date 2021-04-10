@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION bss_splib2
 ;
 ; Dynamic Block Memory Allocator
 ; Alvin Albrecht 2002
@@ -11,7 +11,7 @@ SECTION code_temp_sp1
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPqueuetable
+PUBLIC SPqueuetable
 
 ; Table holds one 2-byte entry per queue.  This is a pointer to
 ; a linked list of available memory queues.  It is zero if none

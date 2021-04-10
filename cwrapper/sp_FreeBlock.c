@@ -14,7 +14,7 @@
 void sp_FreeBlock(void *addr)
 {
 #asm
-   LIB SPFreeBlock
+   EXTERN SPFreeBlock
 
    ld hl,2
    add hl,sp

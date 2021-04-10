@@ -14,7 +14,7 @@
 void sp_InitAlloc(void)
 {
 #asm
-   LIB SPInitAlloc
+   EXTERN SPInitAlloc
 
    call SPInitAlloc
 #endasm

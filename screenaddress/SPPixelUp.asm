@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; PixelUp
 ; Alvin Albrecht 2002
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPPixelUp
+PUBLIC SPPixelUp
 
 ; Pixel Up
 ;

@@ -14,7 +14,7 @@
 void sp_RemoveDList(struct sp_SS *sprite)
 {
 #asm
-   LIB SPRemoveDList
+   EXTERN SPRemoveDList
 
    ld hl,2
    add hl,sp

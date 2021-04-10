@@ -22,7 +22,7 @@ An initial crude way is to hijack the sp1 section:
 
 ```
 for file in `find . -name '*.asm'`; do
-echo "SECTION code_temp_sp1" > temp
+echo "SECTION code_splib2" > temp
 cat $file >> temp
 mv temp $file
 done
@@ -47,7 +47,11 @@ non SP* api names. These parts of the classic library reflect this:
 * input
 * ZX screen address routines
 
-As such, including them in this version of splib2 
+However, dropping in the z88dk library equivalents may not be possible due to:
+
+* Memory allocation setup
+* Different register usage for assembler called functinos
+* Slightly increased memory usage to cope with the above
 
 ### Turning everything into .asm files
 

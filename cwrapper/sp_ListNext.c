@@ -14,7 +14,7 @@
 void *sp_ListNext(struct sp_List *list)
 {
 #asm
-   LIB SPListNext
+   EXTERN SPListNext
 
    ld hl,2
    add hl,sp

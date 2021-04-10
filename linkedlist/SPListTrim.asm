@@ -1,12 +1,12 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void *ListTrim(LIST *list)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListTrim
-LIB SPListCreate
-XREF SPzerolist, _u_free
+PUBLIC SPListTrim
+EXTERN SPListCreate
+GLOBAL SPzerolist, _u_free
 defw SPListCreate
 
 ; enter: hl = LIST *

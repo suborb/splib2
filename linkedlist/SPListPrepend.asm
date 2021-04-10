@@ -1,12 +1,12 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void ListPrepend(LIST *list, void *item, uchar nodeQueue)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListPrepend
-XDEF SPListPrepend2
-LIB SPemptylistadd
+PUBLIC SPListPrepend
+PUBLIC SPListPrepend2
+EXTERN SPemptylistadd
 
 ; enter: de = LIST *
 ;        bc = item *

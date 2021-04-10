@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void *ListNext(LIST *list)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListNext
+PUBLIC SPListNext
 
 ; enter: hl = LIST *
 ; exit : no carry = list empty or current pointer is past end of list

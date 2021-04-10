@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; RemoveDList
 ; Alvin Albrecht 2002
 ;
 
-XLIB SPRemoveDList
+PUBLIC SPRemoveDList
 
 ; RemoveDList 
 ;

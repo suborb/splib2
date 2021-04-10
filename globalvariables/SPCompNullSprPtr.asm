@@ -1,7 +1,7 @@
-SECTION code_temp_sp1
+SECTION rodata_splib2
 
 INCLUDE "SPconfig.def"
-XLIB SPCompNullSprPtr
+PUBLIC SPCompNullSprPtr
 
 IF DISP_HICOLOUR
 .SPCompNullSprPtr

@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; PixelDown
 ; Alvin Albrecht 2002
 ;
 
 INCLUDE "SPconfig.def"
-XLIB SPPixelDown
+PUBLIC SPPixelDown
 
 ; Pixel Down
 ;

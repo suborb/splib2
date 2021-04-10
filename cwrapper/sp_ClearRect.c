@@ -11,11 +11,11 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_ClearRect(struct sp_Rect *area, uchar colour, uchar graphic, uchar affect)
+void sp_ClearRect(struct sp_Rect *area, uint8_t colour, uint8_t graphic, uint8_t affect)
 {
 #asm
-   LIB SPClearRect
-   XREF SPClearRectP
+   EXTERN SPClearRect
+   GLOBAL SPClearRectP
 
    ld hl,2
    add hl,sp

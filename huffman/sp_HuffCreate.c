@@ -6,12 +6,12 @@
 #include <string.h>
 #include "spritepack.h"
 
-struct sp_HuffmanCodec *sp_HuffCreate(uint symbols)
+struct sp_HuffmanCodec *sp_HuffCreate(uint16_t symbols)
 {
    struct sp_HuffmanCodec *hc;
    struct sp_HuffmanLeaf *hl;
    struct sp_HuffmanLeaf **heap;
-   uint i;
+   uint16_t i;
 
    if ((hc = u_malloc(sizeof(struct sp_HuffmanCodec))) == NULL)
       return NULL;

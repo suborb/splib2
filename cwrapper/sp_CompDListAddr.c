@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_CompDListAddr(uchar row, uchar col)
+void *sp_CompDListAddr(uint8_t row, uint8_t col)
 {
 #asm
-   LIB SPCompDListAddr
+   EXTERN SPCompDListAddr
 
    ld hl,2
    add hl,sp

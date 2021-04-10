@@ -14,7 +14,7 @@
 void *sp_ListRemove(struct sp_List *list)
 {
 #asm
-   LIB SPListRemove
+   EXTERN SPListRemove
 
    pop bc
    pop hl

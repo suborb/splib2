@@ -14,7 +14,7 @@
 void *sp_CharRight(void *scrnaddr)
 {
 #asm
-   LIB SPCharRight
+   EXTERN SPCharRight
 
    ld hl,2
    add hl,sp

@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Invalidate Rectangle
 ; Alvin Albrecht 01.2003
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPInvalidate
-XDEF SPInvalidateP
-LIB SPIntRect, SPCompDirtyAddr, SPbitleft2mask, SPbitright2mask
+PUBLIC SPInvalidate
+PUBLIC SPInvalidateP
+EXTERN SPIntRect, SPCompDirtyAddr, SPbitleft2mask, SPbitright2mask
 
 
 ; Invalidate Rectangle

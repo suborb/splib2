@@ -14,7 +14,7 @@
 void *sp_PixelUp(void *scrnaddr)
 {
 #asm
-   LIB SPPixelUp
+   EXTERN SPPixelUp
 
    ld hl,2
    add hl,sp

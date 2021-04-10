@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_CompDirtyAddr(uchar row, uchar col, uchar *mask)
+void *sp_CompDirtyAddr(uint8_t row, uint8_t col, uint8_t *mask)
 {
 #asm
-   LIB SPCompDirtyAddr
+   EXTERN SPCompDirtyAddr
 
    ld hl,6
    add hl,sp

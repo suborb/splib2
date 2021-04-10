@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void *sp_BlockFit(uchar queue, uchar numcheck)
+void *sp_BlockFit(uint8_t queue, uint8_t numcheck)
 {
 #asm
-   LIB SPBlockFit
+   EXTERN SPBlockFit
 
    ld hl,2
    add hl,sp

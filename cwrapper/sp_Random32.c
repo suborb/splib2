@@ -6,10 +6,10 @@
 
 #include "spritepack.h"
 
-uint sp_Random32(uint *hi)
+uint16_t sp_Random32(uint16_t *hi)
 {
 #asm
-   LIB SPRandom32
+   EXTERN SPRandom32
 
    ld hl,2
    add hl,sp

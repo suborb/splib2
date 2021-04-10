@@ -13,7 +13,7 @@
 int sp_IntIntervals(struct sp_Interval *i1, struct sp_Interval *i2, struct sp_Interval *result)
 {
 #asm
-   LIB SPIntIvals
+   EXTERN SPIntIvals
 
    pop bc
    pop hl

@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; JoySinclair2
 ; Alvin Albrecht 2002
@@ -6,8 +6,8 @@ SECTION code_temp_sp1
 ; Reads Sinclair 2 joystick.
 ;
 
-XLIB SPJoySinclair2
-LIB SPtbllookup
+PUBLIC SPJoySinclair2
+EXTERN SPtbllookup
 
 ; JoySinclair2 
 ;

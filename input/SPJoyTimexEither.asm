@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; JoyTimexEither
 ; Alvin Albrecht 9.2003
 ;
 
-XLIB SPJoyTimexEither
-LIB SPtmxsetup
+PUBLIC SPJoyTimexEither
+EXTERN SPtmxsetup
 
 ; JoyTimexEither
 ;

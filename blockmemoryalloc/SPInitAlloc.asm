@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Dynamic Block Memory Allocator
 ; Alvin Albrecht 2002
@@ -12,8 +12,8 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPInitAlloc
-LIB SPqueuetable
+PUBLIC SPInitAlloc
+EXTERN SPqueuetable
 
 ; InitAlloc
 ;

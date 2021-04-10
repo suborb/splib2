@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; JoyKempston
 ; Alvin Albrecht 2002
@@ -6,8 +6,8 @@ SECTION code_temp_sp1
 ; Reads Kempston joystick.
 ;
 
-XLIB SPJoyKempston
-LIB SPtbllookup
+PUBLIC SPJoyKempston
+EXTERN SPtbllookup
 
 ; JoyKempston
 ;

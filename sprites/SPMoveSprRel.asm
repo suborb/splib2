@@ -1,13 +1,13 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; MoveSprRel
 ; Alvin Albrecht 2002
 ;
 
-XLIB SPMoveSprRel
-XDEF SPMoveSprRelC, SPMoveSprRelNC
-LIB SPMoveSprAbs
-XREF SPMoveSprAbsC, SPMoveSprAbsNC
+PUBLIC SPMoveSprRel
+PUBLIC SPMoveSprRelC, SPMoveSprRelNC
+EXTERN SPMoveSprAbs
+GLOBAL SPMoveSprAbsC, SPMoveSprAbsNC
 defw SPMoveSprAbs
 
 ; Move Sprite Relative Calculation

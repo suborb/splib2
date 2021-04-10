@@ -14,7 +14,7 @@
 void *sp_PixelDown(void *scrnaddr)
 {
 #asm
-   LIB SPPixelDown
+   EXTERN SPPixelDown
 
    ld hl,2
    add hl,sp

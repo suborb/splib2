@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; CreateSpr
 ; Alvin Albrecht 2002
@@ -6,12 +6,12 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPCreateSpr
-XREF _u_malloc
-LIB SPBlockAlloc, SPDeleteSpr, SPNullSprPtr
+PUBLIC SPCreateSpr
+GLOBAL _u_malloc
+EXTERN SPBlockAlloc, SPDeleteSpr, SPNullSprPtr
 
 IF COMPRESS
-LIB SPCompNullSprPtr
+EXTERN SPCompNullSprPtr
 ENDIF
 
 ; CreateSpr 

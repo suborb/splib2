@@ -14,7 +14,7 @@
 void sp_ListConcat(struct sp_List *list1, struct sp_List *list2)
 {
 #asm
-   LIB SPListConcat
+   EXTERN SPListConcat
 
    ld hl,2
    add hl,sp

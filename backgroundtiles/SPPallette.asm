@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Set Pallette Array Entry
 ; Alvin Albrecht 06.2003
@@ -6,8 +6,8 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPPallette
-LIB SPTileArray
+PUBLIC SPPallette
+EXTERN SPTileArray
 
 ; Associate Colour with Pallette Entry Code
 ;

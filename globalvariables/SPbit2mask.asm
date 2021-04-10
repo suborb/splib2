@@ -1,6 +1,6 @@
-SECTION code_temp_sp1
+SECTION rodata_splib2
 
-XLIB SPbit2mask
+PUBLIC SPbit2mask
 
 .SPbit2mask
    defb $01,$02,$04,$08,$10,$20,$40,$80

@@ -14,7 +14,7 @@
 void *sp_CharDown(void *scrnaddr)
 {
 #asm
-   LIB SPCharDown
+   EXTERN SPCharDown
 
    ld hl,2
    add hl,sp

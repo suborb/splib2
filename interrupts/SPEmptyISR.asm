@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; Empty ISR routine
 ; Alvin Albrecht 01.2003
 ;
 
-XLIB SPEmptyISR
+PUBLIC SPEmptyISR
 
 ; An empty, do-nothing interrupt service routine for catching
 ; unknown vectors or for use as a default handler while

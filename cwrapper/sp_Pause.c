@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-uint sp_Pause(uint ticks)
+uint16_t sp_Pause(uint16_t ticks)
 {
 #asm
-   LIB SPPause
+   EXTERN SPPause
 
    ld hl,2
    add hl,sp

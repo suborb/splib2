@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 
 ; 32-Bit Random Number Generator
 ; Thanks to Nick Fleming for the code.
@@ -32,9 +32,9 @@ SECTION code_temp_sp1
 ;	or online at http://lib-www.lanl.gov/numerical/bookcpdf.html
 ;	for more info on random numbers.
 
-XLIB SPRandom32
-XDEF SPRand32Seed
-LIB SPMultUnsigned
+PUBLIC SPRandom32
+PUBLIC SPRand32Seed
+EXTERN SPMultUnsigned
 
 .SPRand32Seed
    defw 31415                    ; chose 'pi' as starting seed :-)

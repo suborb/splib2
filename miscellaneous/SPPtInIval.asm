@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; PointInIval
 ; Alvin Albrecht 03.2003
 ;
 
-XLIB SPPtInIval
+PUBLIC SPPtInIval
 
 ; Point In Interval?
 ;

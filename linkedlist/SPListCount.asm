@@ -1,10 +1,10 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; uint ListCount(LIST *list)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListCount
+PUBLIC SPListCount
 
 ; enter: hl = LIST *
 ; exit : de = # items in list

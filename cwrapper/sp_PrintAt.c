@@ -11,10 +11,10 @@
 #define _SPLIB
 #include "spritepack.h"
 
-void sp_PrintAt(uchar row, uchar col, uchar colour, uchar graphic)
+void sp_PrintAt(uint8_t row, uint8_t col, uint8_t colour, uint8_t graphic)
 {
 #asm
-   LIB SPPrintAt
+   EXTERN SPPrintAt
 
    ld hl,2
    add hl,sp

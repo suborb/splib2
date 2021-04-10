@@ -14,7 +14,7 @@
 int sp_IntLargeRect(struct sp_LargeRect *r1, struct sp_LargeRect *r2, struct sp_LargeRect *result)
 {
 #asm
-   LIB SPIntLargeRect
+   EXTERN SPIntLargeRect
 
    ld hl,7
    add hl,sp

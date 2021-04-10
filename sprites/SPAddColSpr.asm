@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; AddColSpr
 ; Alvin Albrecht 2002
@@ -6,9 +6,9 @@ SECTION code_temp_sp1
 
 INCLUDE "SPconfig.def"
 
-XLIB SPAddColSpr
-LIB SPBlockAlloc, SPDeleteSpr
-XREF SPdsloop, _u_malloc
+PUBLIC SPAddColSpr
+EXTERN SPBlockAlloc, SPDeleteSpr
+GLOBAL SPdsloop, _u_malloc
 defw SPDeleteSpr
 
 ; AddColSpr 

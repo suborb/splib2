@@ -1,4 +1,4 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 
 ;
 ;      Sprite Pack V2.0
@@ -9,8 +9,8 @@ SECTION code_temp_sp1
 ;      Alvin Albrecht 01.2003
 ;
 
-XLIB sp_moveabshelp
-LIB sp_fixcliprect
+PUBLIC sp_moveabshelp
+EXTERN sp_fixcliprect
 
 ; Parse this C parameter list for MoveSprAbs functions:
 ; sp_SS *sprite, sp_Rect *clip, int animate, uchar row, uchar col, uchar hpix, uchar vpix

@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; IntRect
 ; Alvin Albrecht 03.2003
 ;
 
-XLIB SPIntRect
-XDEF SPIntSmallIval, SPPtInSmallIval
+PUBLIC SPIntRect
+PUBLIC SPIntSmallIval, SPPtInSmallIval
 
 ; Intersect Rectangles
 ;

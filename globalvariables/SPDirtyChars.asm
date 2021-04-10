@@ -1,8 +1,8 @@
-SECTION code_temp_sp1
+SECTION data_splib2
 
 INCLUDE "SPconfig.def"
 
-XLIB SPDirtyChars
+PUBLIC SPDirtyChars
 
 .SPDirtyChars
 IF DISP_HIRES

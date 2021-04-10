@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void ListFree(LIST *list, void (*itemfree)(void *item))
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListFree
-XREF _u_free
+PUBLIC SPListFree
+GLOBAL _u_free
 
 ; enter: hl = LIST *
 ;        bc = itemfree

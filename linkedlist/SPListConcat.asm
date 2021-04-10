@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; void ListConcat(LIST *list1, LIST *list2)
 ; Alvin Albrecht 02.2003
 ;
 
-XLIB SPListConcat
-XREF _u_free
+PUBLIC SPListConcat
+GLOBAL _u_free
 
 ; enter: hl = list2, de = list1
 ; exit : list1 = list1 concat list2, list2 is deleted

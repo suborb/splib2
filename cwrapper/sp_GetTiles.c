@@ -14,7 +14,7 @@
 void sp_GetTiles(struct sp_Rect *r, void *dest)
 {
 #asm
-   LIB SPGetTiles
+   EXTERN SPGetTiles
 
    ld hl,2
    add hl,sp

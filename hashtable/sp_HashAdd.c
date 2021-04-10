@@ -13,7 +13,7 @@
 
 void *sp_HashAdd(struct sp_HashTable *ht, void *key, void *value)
 {
-   uint i;
+   uint16_t i;
    struct sp_HashCell *hc, *lag, *ls;
 
    ls = ht->table[i = (ht->hashfunc)(key, ht->size)];

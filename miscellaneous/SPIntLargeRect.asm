@@ -1,11 +1,11 @@
-SECTION code_temp_sp1
+SECTION code_splib2
 ;
 ; IntLargeRect
 ; Alvin Albrecht 03.2003
 ;
 
-XLIB SPIntLargeRect
-LIB SPIntIvals
+PUBLIC SPIntLargeRect
+EXTERN SPIntIvals
 
 ; Intersect Large Rectangles
 ;
