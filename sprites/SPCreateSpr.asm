@@ -9,6 +9,7 @@ INCLUDE "SPconfig.def"
 PUBLIC SPCreateSpr
 GLOBAL _u_malloc
 EXTERN SPBlockAlloc, SPDeleteSpr, SPNullSprPtr
+EXTERN l_jphl
 
 IF COMPRESS
 EXTERN SPCompNullSprPtr
@@ -46,7 +47,7 @@ ENDIF
    ld de,14
    push de
    ld hl,(_u_malloc)
-   call JPHL                  ; get memory for sprite struct
+   call l_jphl                  ; get memory for sprite struct
    pop de
    pop bc
    ld a,h
@@ -87,7 +88,7 @@ ENDIF
    ld de,14
    push de
    ld hl,(_u_malloc)
-   call JPHL                  ; get memory for char struct
+   call l_jphl                  ; get memory for char struct
    pop de
    pop bc
    ld a,h
@@ -105,7 +106,7 @@ ENDIF
    ld de,14
    push de
    ld hl,(_u_malloc)
-   call JPHL                  ; get memory for char struct
+   call l_jphl                  ; get memory for char struct
    pop de
    pop bc
    ld a,h
@@ -135,17 +136,17 @@ ENDIF
 IF COMPRESS
    ld a,c
    and $c0
-IF DISP_HICOLOUR
+  IF DISP_HICOLOUR
    ld a,24
-ELSE
+  ELSE
    ld a,16
-ENDIF
+  ENDIF
    jr z, notcompress
-IF DISP_HICOLOUR
+  IF DISP_HICOLOUR
    ld a,16
-ELSE
+  ELSE
    ld a,8
-ENDIF
+  ENDIF
    ld (hl),SPCompNullSprPtr%256
    inc hl
    ld (hl),SPCompNullSprPtr/256
@@ -164,19 +165,21 @@ ENDIF
    ld (hl),SProtatetbl/256    ; no horizontal rotation
    inc hl
 IF !DISP_HIRES
+  IF !BUILD_MK2
    ex af,af'
    ld (hl),a
    ex af,af'
+  ENDIF
 ENDIF
    inc hl
    ld (hl),0			; no next char struct in display list
    pop hl                     ; hl = char struct (next in sprite ptr)
 IF !COMPRESS
-IF DISP_HICOLOUR
+  IF DISP_HICOLOUR
    ld a,24
-ELSE
+  ELSE
    ld a,16
-ENDIF
+  ENDIF
 ENDIF
    add a,e
    ld e,a                     ; de = sprite column bitdef, next char
@@ -203,5 +206,3 @@ ENDIF
    ld d,h                     ; de = sprite struct address
    jp SPDeleteSpr
 
-.JPHL
-   jp (hl)

@@ -423,9 +423,13 @@ extern int  __LIB__  sp_IntPtInterval(uint16_t x, struct sp_Interval *i) __small
 
 
 /* sprites */
-
+#ifdef BUILD_MK2
+extern struct sp_SS __LIB__ *sp_CreateSpr(uint8_t type, uint8_t rows, void *graphic) __smallc;
+extern int  __LIB__  sp_AddColSpr(struct sp_SS *sprite, void *graphic) __smallc;
+#else
 extern struct sp_SS __LIB__ *sp_CreateSpr(uint8_t type, uint8_t rows, void *graphic, uint8_t plane, uint8_t extra) __smallc;
 extern int  __LIB__  sp_AddColSpr(struct sp_SS *sprite, void *graphic, uint8_t extra) __smallc;
+#endif
 extern void __LIB__  sp_DeleteSpr(struct sp_SS *sprite);
 extern void __LIB__  sp_IterateSprChar(struct sp_SS *sprite, void (*hook)(struct sp_CS *cs)) __smallc;
 extern void __LIB__  sp_RemoveDList(struct sp_SS *sprite);
@@ -475,13 +479,13 @@ extern void __LIB__ *sp_CompDirtyAddr(uint8_t row, uint8_t col, uint8_t *mask) _
 
 /* input */
 
-extern uint8_t __LIB__ sp_JoySinclair1(void);
-extern uint8_t __LIB__ sp_JoySinclair2(void);
-extern uint8_t __LIB__ sp_JoyTimexEither(void);
-extern uint8_t __LIB__ sp_JoyTimexLeft(void);
-extern uint8_t __LIB__ sp_JoyTimexRight(void);
-extern uint8_t __LIB__ sp_JoyFuller(void);
-extern uint8_t __LIB__ sp_JoyKempston(void);
+extern uint8_t __LIB__ sp_JoySinclair1();
+extern uint8_t __LIB__ sp_JoySinclair2();
+extern uint8_t __LIB__ sp_JoyTimexEither();
+extern uint8_t __LIB__ sp_JoyTimexLeft();
+extern uint8_t __LIB__ sp_JoyTimexRight();
+extern uint8_t __LIB__ sp_JoyFuller();
+extern uint8_t __LIB__ sp_JoyKempston();
 extern uint8_t __LIB__ sp_JoyKeyboard(struct sp_UDK *keys);
 extern void  __LIB__ sp_WaitForKey(void);
 extern void  __LIB__ sp_WaitForNoKey(void);

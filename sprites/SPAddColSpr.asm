@@ -8,6 +8,7 @@ INCLUDE "SPconfig.def"
 
 PUBLIC SPAddColSpr
 EXTERN SPBlockAlloc, SPDeleteSpr
+EXTERN l_jphl
 GLOBAL SPdsloop, _u_malloc
 defw SPDeleteSpr
 
@@ -27,10 +28,12 @@ defw SPDeleteSpr
 
 .SPAddColSpr
 IF DISP_HICOLOUR
+  IF !BUILD_MK2
    ex af,af'
    add a,a              ; convert threshold number
    or SProtatetbl/256   ; to rotation table msb
    ex af,af'
+  ENDIF
 ENDIF
    ld a,(ix+5)          ; adjust sprite column address
 ; ******** POSSIBLE BUG FOR COMPRESS SPRITES?
@@ -62,7 +65,7 @@ ENDIF
    ld de,14
    push de
    ld hl,(_u_malloc)
-   call JPHL            ; get memory for new char struct
+   call l_jphl            ; get memory for new char struct
    pop de
    pop ix
    pop bc
@@ -123,11 +126,11 @@ ELSE
 ENDIF
 IF COMPRESS
    jr z, nochange
-IF DISP_HICOLOUR
+  IF DISP_HICOLOUR
    ld a,16
-ELSE
+  ELSE
    ld a,8
-ENDIF
+  ENDIF
 .nochange
 ENDIF
    add a,e
@@ -140,9 +143,11 @@ ENDIF
    ld (hl),a
    inc hl
 IF !DISP_HIRES
+  IF !BUILD_MK2
    ex af,af'
    ld (hl),a
    ex af,af'
+  ENDIF
 ENDIF
    inc hl
    ld (hl),0            ; no next char struct in display list
@@ -179,6 +184,3 @@ ENDIF
    ld e,(hl)
    ex de,hl
    jp SPdsloop
-
-.JPHL
-   jp (hl)
