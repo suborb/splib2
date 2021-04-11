@@ -40,12 +40,12 @@ When AA rewrote splib2 to create the sp1 which is included in the main z88dk tre
 utility functions within splib2 were split out into separate modules and given
 non SP* api names. These parts of the classic library reflect this:
 
-* balloc
-* interrupts
-* adt-linkedlist
-* adt-heap
-* input
-* ZX screen address routines
+* [ ] balloc
+* [ ] interrupts
+* [ ] adt-linkedlist
+* [x] adt-heap
+* [ ] input
+* [ ] ZX screen address routines
 
 However, dropping in the z88dk library equivalents may not be possible due to:
 
