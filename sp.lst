@@ -123,10 +123,11 @@ c/sp_UpdateNow
 c/sp_UpdateNowEx
 cwrapper/sp_Validate
 cwrapper/sp_Wait
-cwrapper/sp_WaitForKey
-cwrapper/sp_WaitForNoKey
+c/sp_WaitForKey
+c/sp_WaitForNoKey
 displaylist/SPCompDListAddr
 displaylist/SPCompDirtyAddr
+globalvariables/MK1Vars
 globalvariables/SPbit2mask
 globalvariables/SPbitleft2mask
 globalvariables/SPbitright2mask

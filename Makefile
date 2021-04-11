@@ -20,7 +20,7 @@ splib2-new.lib: $(OFILES)
 	z80asm -xsplib2-new @sp.lst
 
 splib2-mk2.lib: $(OFILES)
-	z80asm -DBUILD_MK2 -xsplib2-new @sp.lst
+	z80asm -DBUILD_MK2 -xsplib2-mk2 @sp.lst
 
 dirs:
 	mkdir -p obj/mk2 obj/splib2

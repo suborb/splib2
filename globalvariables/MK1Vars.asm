@@ -1,0 +1,6 @@
+
+SECTION data_splib2
+
+PUBLIC __SP_DOSPRITES
+
+__SP_DOSPRITES: defb 1

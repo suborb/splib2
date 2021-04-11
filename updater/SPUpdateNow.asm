@@ -88,8 +88,13 @@ ENDIF
 ;
 ; The screen draw subroutine.
 ;
+; MK2 mode: Entry: a = whether to draw sprites or not
 
 .SPUpdateNow
+IF BUILD_MK2
+   EXTERN __SP_DOSPRITES
+   ld (__SP_DOSPRITES),a
+ENDIF
    ld de,$4000 + (256 * (SP_ROWSTART & $18)) + (32 * (SP_ROWSTART & 7))   ; de = screen address
 IF DISP_TMXDUAL
    ld a,(SPScreen)
@@ -571,7 +576,11 @@ ENDIF
    inc hl
    ld b,(hl)                     ; bc = sprite graphic
    inc hl
-
+IF BUILD_MK2
+   ld a,(__SP_DOSPRITES)
+   or a
+   jp z,skip_sprite_update
+ENDIF
    push hl                       ; save char struct + 9
    ld h,(hl)                     ; h = msb of horizontal rotation table to use
    cp $c0                        ; what kind of sprite is this?
@@ -899,7 +908,7 @@ ENDIF
    dec h
 
 IF DISP_HICOLOUR
-IF COMPRESS
+ IF COMPRESS
 
    ; unfortunately, because I've used ix with fixed offsets to get colour,
    ; the colour code needs to be duplicated for masked sprites in COMPRESS
@@ -919,11 +928,11 @@ IF COMPRESS
 
 .DUPclrrotate                    ; now do colours bottom up
    ld c,$80                      ; the transparent colour
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    set 5,d
-ENDIF
+  ENDIF
 
    ld a,(ix+23)
    cp c                          ; if transparent colour, do not colour
@@ -931,83 +940,83 @@ ENDIF
    ld (de),a
 
 .DUPclear0
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d                         ; move up scan line
-ENDIF
+  ENDIF
    ld a,(ix+20)
    cp c
    jr z, DUPclear1
    ld (de),a
 
 .DUPclear1
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
+  ENDIF
    ld a,(ix+17)
    cp c
    jr z, DUPclear2
    ld (de),a
 
 .DUPclear2
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
+  ENDIF
    ld a,(ix+14)
    cp c
    jr z, DUPclear3
    ld (de),a
 
 .DUPclear3
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
+  ENDIF
    ld a,(ix+11)
    cp c
    jr z, DUPclear4
    ld (de),a
 
 .DUPclear4
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
+  ENDIF
    ld a,(ix+8)
    cp c
    jr z, DUPclear5
    ld (de),a
 
 .DUPclear5
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
+  ENDIF
    ld a,(ix+5)
    cp c
    jr z, DUPclear6
    ld (de),a
 
 .DUPclear6
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
+  ENDIF
    ld a,(ix+2)
    cp c
    jp z, clear7
    ld (de),a                     ; de back to top of char again (colour map)
    jp clear7
-ENDIF
+ ENDIF
 
 .coloursprite
    ld a,h                        ; have a look at the rotation
@@ -1017,131 +1026,131 @@ ENDIF
    cp (hl)
    jp nc, clrrotate              ; if rotation > threshold, rotate colour
 .noclrrotate
-IF !COMPRESS
+  IF !COMPRESS
    ld ix,-22
-ELSE
+  ELSE
    ld ix,-14
-ENDIF
+  ENDIF
    add ix,bc                     ; ix = sprite graphic
 
 .clrrotate                       ; now do colours bottom up
    ld c,$80                      ; the transparent colour
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    set 5,d
-ENDIF
+  ENDIF
 
-IF !COMPRESS
+  IF !COMPRESS
    ld a,(ix+23)
-ELSE
+  ELSE
    ld a,(ix+15)
-ENDIF
+  ENDIF
    cp c                          ; if transparent colour, do not colour
    jr z, clear0
    ld (de),a
 
 .clear0
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d                         ; move up scan line
-ENDIF
-IF !COMPRESS
+  ENDIF
+  IF !COMPRESS
    ld a,(ix+20)
-ELSE
+  ELSE
    ld a,(ix+13)
-ENDIF
+  ENDIF
    cp c
    jr z, clear1
    ld (de),a
 
 .clear1
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
-IF !COMPRESS
+  ENDIF
+  IF !COMPRESS
    ld a,(ix+17)
-ELSE
+  ELSE
    ld a,(ix+11)
-ENDIF
+  ENDIF
    cp c
    jr z, clear2
    ld (de),a
 
 .clear2
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
-IF !COMPRESS
+  ENDIF
+  IF !COMPRESS
    ld a,(ix+14)
-ELSE
+  ELSE
    ld a,(ix+9)
-ENDIF
+  ENDIF
    cp c
    jr z, clear3
    ld (de),a
 
 .clear3
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
-IF !COMPRESS
+  ENDIF
+  IF !COMPRESS
    ld a,(ix+11)
-ELSE
+  ELSE
    ld a,(ix+7)
-ENDIF
+  ENDIF
    cp c
    jr z, clear4
    ld (de),a
 
 .clear4
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
-IF !COMPRESS
+  ENDIF
+  IF !COMPRESS
    ld a,(ix+8)
-ELSE
+  ELSE
    ld a,(ix+5)
-ENDIF
+  ENDIF
    cp c
    jr z, clear5
    ld (de),a
 
 .clear5
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
-IF !COMPRESS
+  ENDIF
+  IF !COMPRESS
    ld a,(ix+5)
-ELSE
+  ELSE
    ld a,(ix+3)
-ENDIF
+  ENDIF
    cp c
    jr z, clear6
    ld (de),a
 
 .clear6
-IF NOFLICKER
+  IF NOFLICKER
    inc de
-ELSE
+  ELSE
    dec d
-ENDIF
-IF !COMPRESS
+  ENDIF
+  IF !COMPRESS
    ld a,(ix+2)
-ELSE
+  ELSE
    ld a,(ix+1)
-ENDIF
+  ENDIF
    cp c
    jr z, clear7
    ld (de),a                     ; de back to top of char again (colour map)
@@ -1152,15 +1161,18 @@ ELSE                             ; not DISP_HICOLOUR
 
 .coloursprite
    pop hl                        ; hl = char struct + 9
+  IF BUILD_MK2
+.skip_sprite_update
+  ENDIF
    inc hl
-IF DISP_SPECTRUM
+  IF DISP_SPECTRUM
    ld a,(hl)                     ; colour
    cp $80                        ; special transparent colour
    jr z, clear
    ld (tempcolour),a
 
 .clear
-ENDIF
+  ENDIF
 ENDIF
 
    inc hl                        ; hl = char struct + 11
