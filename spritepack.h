@@ -101,28 +101,6 @@ extern void *(*u_free)(void *addr);
 #define TRANSPARENT    0x80
 
 
-/* AY Chip Port Addresses - don't use, incomplete
-
-#define AYREG_2068     0xf5
-#define AYDAT_2068     0xf6
-#define AYREG_128      0xfffd
-#define AYDAT_128      0xbffd
-#define AYREG_FULLER   0x3f
-#define AYDAT_FULLER   0x5f
-
-struct sp_AYSTATE {
-   uint16_t  mask;
-   uint8_t R13, R12, R11, R10, R9, R8, R7, R6, R5, R4, R3, R2, R1, R0;
-};
-
-struct sp_AYPSG2 {
-   uint8_t      count;
-   uint8_t     *addr;
-   uint16_t       map;
-};
-
-*/
-
 
 /* SP's Sprite Struct */
 
@@ -365,19 +343,6 @@ extern uint16_t *sp_Random32Seed;           // requires sp_Random32()
 #asm
 GLOBAL SPRand32Seed
 ._sp_Random32Seed       defw SPRand32Seed
-#endasm
-
-extern uint8_t *sp_AY_RegPort;
-#asm
-EXTERN SPAYReg
-._sp_AY_Reg              defw SPAYReg
-#endasm
-
-extern uint8_t *sp_AY_DataPort;
-#asm
-EXTERN SPAYReg
-GLOBAL SPAYData
-._sp_AY_Data             defw SPAYData
 #endasm
 
 extern uint8_t *sp_BorderClr;             // requires sp_Border()

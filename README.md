@@ -9,12 +9,18 @@ be used with modern z88dks.
 
 Enjoy the journey...
 
+## Results
+
+| Games | Original Size | New size with latest |
+|-|-|-|
+| [Red Planet](https://spectrumcomputing.co.uk/index.php?cat=96&id=30231) | 35935 | 35031 |
+
 ## Updating process
 
 For those that are interested. The updating process has involved/will involve the following
 steps:
 
-### Sectioning the code (done)
+### Sectioning the code
 
 z88dk now uses sections, so we need to assign the .asm source code into sections.
 
