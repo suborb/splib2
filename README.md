@@ -116,9 +116,11 @@ Not all tunings have been done, but we do have some size savings:
 
 | Games | Original Size | New size with latest |
 |-|-|-|
-| [Red Planet](https://spectrumcomputing.co.uk/index.php?cat=96&id=30231) | 35935 | 35031 |
-| [Helmet](https://github.com/mojontwins/MK1/tree/master/examples/helmet) | 37657 | 37356 |
-| [Goddess](https://github.com/mojontwins/MK1/tree/master/examples/goddess)| 29219 | 28913 |
+| [Red Planet](https://spectrumcomputing.co.uk/index.php?cat=96&id=30231) | 35934 | 34979 |
+| [Helmet](https://github.com/mojontwins/MK1/tree/master/examples/helmet) | 37655 | 37356 |
+| [Goddess](https://github.com/mojontwins/MK1/tree/master/examples/goddess)| 29217 | 28913 |
+| [Nightmare on Halloween](https://github.com/mojontwins/MK1/tree/master/contrib/nightmare_on_halloween) | 29162 | 28875 |
+| [Misco Jones](https://github.com/mojontwins/MK1/tree/master/contrib/misco_jones) | 27915 | 27625 |
 
 
 
