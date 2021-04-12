@@ -13,24 +13,27 @@ Enjoy the journey...
 
 1. Change the definition of joyfunc (definitions.h) to:
 
+````
 uint (*joyfunc)(struct sp_UDK *) = sp_JoyKeyboard;
-
+````
 
 2. Sort out the case sensitivity problems in music.h:
 
+````
     cat music.h | tr '[A-Z]' '[a-z]' > x
     mv x music.h
+````
 
 3. Remove the unnecessary # operator in beeper.h
 
-``
+````
 -               defb #01        ;ld bc
 +               defb 01 ;ld bc
-``
+````
 
 4. Create zpragma.inc:
 
-``
+````
 // Console not used, disable it
 #pragma export fputc_cons = 0
 
@@ -49,7 +52,7 @@ uint (*joyfunc)(struct sp_UDK *) = sp_JoyKeyboard;
 
 // Ensure that we don't map the border colour
 #pragma define CONIO_NATIVE_COLOUR = 1
-``
+````
 
 Change the sp and origin to appropriate values
 
