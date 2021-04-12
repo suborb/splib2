@@ -9,6 +9,7 @@ INCLUDE "SPconfig.def"
 PUBLIC SPDeleteSpr
 GLOBAL _u_free
 PUBLIC SPdsloop
+EXTERN l_jphl
 
 ; DeleteSpr 
 ;
@@ -32,7 +33,7 @@ PUBLIC SPdsloop
    push bc
    push de
    ld hl,(_u_free)
-   call JPHL
+   call l_jphl
    pop de
    pop hl               ; hl = next char struct in sprite
 
@@ -44,5 +45,3 @@ PUBLIC SPdsloop
    jp nz, loop
    ret
 
-.JPHL
-   jp (hl)

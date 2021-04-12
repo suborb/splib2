@@ -14,7 +14,7 @@ blockmemoryalloc/SPBlockAlloc
 blockmemoryalloc/SPBlockCount
 blockmemoryalloc/SPFreeBlock
 blockmemoryalloc/SPInitAlloc
-cwrapper/sp_AddColSpr
+c/sp_AddColSpr
 cwrapper/sp_AddMemory
 cwrapper/sp_BlockAlloc
 cwrapper/sp_BlockCount
@@ -28,7 +28,7 @@ cwrapper/sp_ClearRect
 cwrapper/sp_CompDirtyAddr
 cwrapper/sp_CompDListAddr
 cwrapper/sp_ComputePos
-cwrapper/sp_CreateSpr
+c/sp_CreateSpr
 cwrapper/sp_CreateGenericISR
 cwrapper/sp_DeleteSpr
 cwrapper/sp_EmptyISR

@@ -77,9 +77,11 @@ ENDIF
    ld (hl),a                  ; no vertical rotation
    inc hl
    ld (hl),a                  ; no next char struct
+IF !BUILD_MK2
    ld a,c
    and $3f
    ld (ix+12),a               ; sprite plane
+ENDIF
    ld a,c
    and $c0
    ld (ix+13),a               ; sprite type

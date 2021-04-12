@@ -5,6 +5,8 @@ SECTION code_splib2
 ;
 
 PUBLIC SPIterateSprChar
+EXTERN l_jphl
+EXTERN l_jpiy
 
 ; IterateSprChar 
 ;
@@ -43,13 +45,7 @@ PUBLIC SPIterateSprChar
    ld h,a
    push hl
    push hl         ; extra push to simplify C interface
-   call JPIY
+   call l_jpiy
    pop hl
    pop hl
    jp iterlp
-
-.JPIY
-   defb $fd
-
-.JPHL
-   jp (hl)

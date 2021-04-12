@@ -13,12 +13,13 @@ PUBLIC _sp_CreateSpr
 EXTERN SPCreateSpr
 
 
-/* returns no carry if success */
 IF BUILD_MK2
 ;struct sp_SS *sp_CreateSpr(uint8_t type, uint8_t rows, void *graphic)
 ELSE
 ;struct sp_SS *sp_CreateSpr(uint8_t type, uint8_t rows, void *graphic, uint8_t plane, uint8_t extra)
 ENDIF
+sp_CreateSpr:
+_sp_CreateSpr:
    ld hl,2
    add hl,sp         ; hl points past ret address
 IF !BUILD_MK2
@@ -48,6 +49,7 @@ ENDIF
    push ix
    pop hl            ; hl = sprite struct
    ccf               ; no carry indicates success, compatible with C "iferror(..)"
+   ret
 
 ;  enter:  B = #rows 
 ;          C = sprite attribute 

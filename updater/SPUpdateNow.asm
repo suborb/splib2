@@ -410,7 +410,7 @@ ENDIF
    jr z, tileonly
 
 IF DISP_HICOLOUR                 ; copy tile colour to screen, bottom up
-IF NOFLICKER
+  IF NOFLICKER
    push hl
    ld l,c
    ld h,b
@@ -424,7 +424,7 @@ IF NOFLICKER
    ldi
    pop hl
    ld de,tempgraphic
-ELSE
+  ELSE
    ld a,(bc)                     ; copy tile colour to screen, bottom up
    ld (de),a
    inc bc
@@ -457,7 +457,7 @@ ELSE
    ld (de),a
    ld a,(hl)
    res 5,d                       ; de = top of char screen address
-ENDIF
+  ENDIF
 ENDIF
 
    inc hl
@@ -1161,16 +1161,17 @@ ELSE                             ; not DISP_HICOLOUR
 
 .coloursprite
    pop hl                        ; hl = char struct + 9
-  IF BUILD_MK2
+ IF BUILD_MK2
 .skip_sprite_update
-  ENDIF
+   inc hl
+ ELSE
    inc hl
   IF DISP_SPECTRUM
    ld a,(hl)                     ; colour
    cp $80                        ; special transparent colour
    jr z, clear
    ld (tempcolour),a
-
+  ENDIF
 .clear
   ENDIF
 ENDIF

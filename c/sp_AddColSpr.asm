@@ -18,6 +18,8 @@ ELSE
 ;int sp_AddColSpr(struct sp_SS *sprite, void *graphic, uint8_t extra)
 ENDIF
 
+sp_AddColSpr:
+_sp_AddColSpr:
    ld hl,2
    add hl,sp
 IF !BUILD_MK2
