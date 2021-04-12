@@ -56,7 +56,7 @@ uint (*joyfunc)(struct sp_UDK *) = sp_JoyKeyboard;
 
 Change the sp and origin to appropriate values
 
-5. Alter the compilation line to have the addition option `-pragma-include:zpragma.inc` -DBUILD_MK2
+5. Alter the compilation line to have the addition option `-pragma-include:zpragma.inc -DBUILD_MK2`
 
 ## Results
 
