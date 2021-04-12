@@ -58,8 +58,7 @@ Change the sp and origin to appropriate values
 
 5. Alter the compilation line to have the addition option `-pragma-include:zpragma.inc` -DBUILD_MK2
 
-
-## Results
+## Results
 
 Not all tunings have been done, but we do have some size savings:
 
