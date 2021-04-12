@@ -9,11 +9,63 @@ be used with modern z88dks.
 
 Enjoy the journey...
 
-## Results
+## Steps to adjust source 
+
+1. Change the definition of joyfunc (definitions.h) to:
+
+uint (*joyfunc)(struct sp_UDK *) = sp_JoyKeyboard;
+
+
+2. Sort out the case sensitivity problems in music.h:
+
+    cat music.h | tr '[A-Z]' '[a-z]' > x
+    mv x music.h
+
+3. Remove the unnecessary # operator in beeper.h
+
+``
+-               defb #01        ;ld bc
++               defb 01 ;ld bc
+``
+
+4. Create zpragma.inc:
+
+``
+// Console not used, disable it
+#pragma export fputc_cons = 0
+
+// Not a 128k game, so disable the bank loader
+#pragma define CRT_DISABLELOADER = 1
+
+#pragma output REGISTER_SP = 61936
+
+#pragma define CRT_ORG_CODE = 24000
+
+// We're not exiting, so we don't need an atexit stack
+#pragma define CLIB_EXIT_STACK_SIZE = 0
+
+// Stdio isn't used, disable it
+#pragma define CRT_ENABLE_STDIO = 0
+
+// Ensure that we don't map the border colour
+#pragma define CONIO_NATIVE_COLOUR = 1
+``
+
+Change the sp and origin to appropriate values
+
+5. Alter the compilation line to have the addition option `-pragma-include:zpragma.inc` -DBUILD_MK2
+
+
+## Results
+
+Not all tunings have been done, but we do have some size savings:
 
 | Games | Original Size | New size with latest |
 |-|-|-|
 | [Red Planet](https://spectrumcomputing.co.uk/index.php?cat=96&id=30231) | 35935 | 35031 |
+| [Helmet](https://github.com/mojontwins/MK1/tree/master/examples/helmet) | 37657 | 37356 |
+| [Goddess](https://github.com/mojontwins/MK1/tree/master/examples/goddess)| 29219 | 28913 |
+
 
 ## Updating process
 
