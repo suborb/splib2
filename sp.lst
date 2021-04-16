@@ -101,9 +101,11 @@ cwrapper/sp_PixelDown
 cwrapper/sp_PixelUp
 cwrapper/sp_PixelLeft
 cwrapper/sp_PixelRight
-cwrapper/sp_PrintAt
+c/sp_PrintAt
+c/sp_PrintAt_callee
 cwrapper/sp_PrintAtDiff
-cwrapper/sp_PrintAtInv
+c/sp_PrintAtInv
+c/sp_PrintAtInv_callee
 cwrapper/sp_PrintString
 cwrapper/sp_PutTiles
 cwrapper/sp_pssread
