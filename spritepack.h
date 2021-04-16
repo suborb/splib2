@@ -391,10 +391,15 @@ extern int  __LIB__  sp_IntPtInterval(uint16_t x, struct sp_Interval *i) __small
 #ifdef BUILD_MK2
 extern struct sp_SS __LIB__ *sp_CreateSpr(uint8_t type, uint8_t rows, void *graphic) __smallc;
 extern int  __LIB__  sp_AddColSpr(struct sp_SS *sprite, void *graphic) __smallc;
+extern int  __LIB__  sp_AddColSpr_callee(struct sp_SS *sprite, void *graphic) __smallc __z88dk_callee;
+#define sp_AddColSpr(s,g) sp_AddColSpr_calle(s,g)
 #else
 extern struct sp_SS __LIB__ *sp_CreateSpr(uint8_t type, uint8_t rows, void *graphic, uint8_t plane, uint8_t extra) __smallc;
 extern int  __LIB__  sp_AddColSpr(struct sp_SS *sprite, void *graphic, uint8_t extra) __smallc;
+extern int  __LIB__  sp_AddColSpr_callee(struct sp_SS *sprite, void *graphic, uint8_t extra) __smallc __z88dk_callee;
+#define sp_AddColSpr(s,g,e) sp_AddColSpr_calle(s,g,e)
 #endif
+
 extern void __LIB__  sp_DeleteSpr(struct sp_SS *sprite);
 extern void __LIB__  sp_IterateSprChar(struct sp_SS *sprite, void (*hook)(struct sp_CS *cs)) __smallc;
 extern void __LIB__  sp_RemoveDList(struct sp_SS *sprite);

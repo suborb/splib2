@@ -15,6 +15,9 @@ blockmemoryalloc/SPBlockCount
 blockmemoryalloc/SPFreeBlock
 blockmemoryalloc/SPInitAlloc
 c/sp_AddColSpr
+c/_sp_AddColSpr
+c/sp_AddColSpr_callee
+c/_sp_AddColSpr_callee
 cwrapper/sp_AddMemory
 cwrapper/sp_BlockAlloc
 cwrapper/sp_BlockCount

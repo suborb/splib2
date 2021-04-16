@@ -8,7 +8,7 @@
 ; */
 
 SECTION code_splib2
-PUBLIC sp_AddColSpr
+PUBLIC sp_AddColSpr_callee
 EXTERN SPAddColSpr
 
 IF BUILD_MK2
@@ -17,26 +17,16 @@ ELSE
 ;int sp_AddColSpr(struct sp_SS *sprite, void *graphic, uint8_t extra)
 ENDIF
 
-sp_AddColSpr:
-   ld hl,2
-   add hl,sp
+sp_AddColSpr_callee:
+   pop bc ;Return address
 IF !BUILD_MK2
-   ld a,(hl)
-   ex af,af
-   inc hl
-   inc hl
+   pop hl  ;extra
+   ld  a,l
+   ex  af,af
 ENDIF
-   ld e,(hl)
-   inc hl
-   ld d,(hl)
-   inc hl
-   ld c,(hl)
-   inc hl
-   ld b,(hl)
-   defb $dd
-   ld l,c
-   defb $dd
-   ld h,b
+   pop de  ;graphic
+   pop ix  ;sprite
+   push bc
    call SPAddColSpr
    ld hl,1
    ccf
