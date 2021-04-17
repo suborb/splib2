@@ -27,7 +27,7 @@ We're going to use a makefile to build the library. By the time the modernisatio
 finished it won't be needed since the library will be purely .asm files so just
 a single invocation of z80asm will be needed.
 
-### Removing code that duplicates existing code
+### Removing code that duplicates existing code (in progress)
 
 When AA rewrote splib2 to create the sp1 which is included in the main z88dk tree, the
 utility functions within splib2 were split out into separate modules and given
@@ -51,7 +51,7 @@ However, dropping in the z88dk library equivalents may not be possible due to:
 Embedding assembler code in C functions is not considered best practice these days so
 we'll need to extract the code to straight assembler files.
 
-### Adding `__z88dk_fastcall`/`__z88dk_callee` entry points
+### Adding `__z88dk_fastcall`/`__z88dk_callee` entry points (in progress)
 
 Utilising these alternate calling conventions reduces code size and increases performance.
 
