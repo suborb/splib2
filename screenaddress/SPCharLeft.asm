@@ -28,7 +28,11 @@ IF !DISP_HIRES
    ld a,h
    sub $08
    ld h,a
+IF DISP_8192
+   cp $20
+ELSE
    cp $40
+ENDIF
    ret
 
 ELSE

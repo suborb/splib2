@@ -28,7 +28,11 @@ IF !DISP_HIRES
    ld l,a
    ld a,h
    and $18
+IF DISP_8192
+   or $20
+ELSE
    or $40
+ENDIF
    ld h,a
    ret
 

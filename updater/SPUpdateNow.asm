@@ -91,11 +91,20 @@ ENDIF
 ; MK2 mode: Entry: a = whether to draw sprites or not
 
 .SPUpdateNow
+IF DISP_COPY
+    EXTERN  _SP_CopyScreen
+    ld      de,_SP_CopyScreen
+    push    de
+ENDIF
 IF BUILD_MK2
    EXTERN __SP_DOSPRITES
    ld (__SP_DOSPRITES),a
 ENDIF
+IF DISP_8192
+   ld de,$2000 + (256 * (SP_ROWSTART & $18)) + (32 * (SP_ROWSTART & 7))   ; de = screen address
+ELSE
    ld de,$4000 + (256 * (SP_ROWSTART & $18)) + (32 * (SP_ROWSTART & 7))   ; de = screen address
+ENDIF
 IF DISP_TMXDUAL
    ld a,(SPScreen)
    add a,d
@@ -1276,6 +1285,9 @@ ENDIF
    rrca
 IF DISP_TMXDUAL
    or l
+ENDIF
+IF DISP_8192
+    and     @00111111
 ENDIF
    ld d,a
    ld a,(tempcolour)             ; what's the final colour of this square?

@@ -27,6 +27,8 @@ PUBLIC SPCharDown
 IF DISP_HIRES
    and $18
    cp $18
+ELIF DISP_8192
+   cp $38
 ELSE
    cp $58
 ENDIF

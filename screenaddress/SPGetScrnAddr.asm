@@ -22,7 +22,11 @@ IF !DISP_HIRES
 
 .SPGetScrnAddr
    and $07
+IF DISP_8192
+   or $20
+ELSE
    or $40
+ENDIF
    ld d,a
    ld a,h
    rra

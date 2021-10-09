@@ -452,7 +452,14 @@ extern void __LIB__ *sp_CompDirtyAddr(uint8_t row, uint8_t col, uint8_t *mask) _
 
 
 /* input */
-
+#ifdef SP_Z88DK_INPUT
+#include <input.h>
+#define sp_WaitForNoKey() in_WaitForNoKey()
+#define sp_WaitForKey() in_WaitForKey()
+#define sp_KeyPressed(x) in_KeyPressed(x)
+#define sp_LookupKey(c) in_LookupKey(c)
+#define sp_Inkey() in_Inkey()
+#else
 extern uint8_t __LIB__ sp_JoySinclair1();
 extern uint8_t __LIB__ sp_JoySinclair2();
 extern uint8_t __LIB__ sp_JoyTimexEither();
@@ -476,6 +483,7 @@ extern void  __LIB__ sp_MouseKempston(uint16_t *xcoord, uint8_t *ycoord, uint8_t
 extern void  __LIB__ sp_SetMousePosKempston(uint16_t xcoord, uint8_t ycoord) __smallc;
 extern void  __LIB__ sp_MouseSim(struct sp_UDM *m, uint16_t *xcoord, uint8_t *ycoord, uint8_t *buttons) __smallc;
 extern void  __LIB__ sp_SetMousePosSim(struct sp_UDM *m, uint16_t xcoord, uint8_t ycoord)  __smallc;
+#endif
 
 
 /* screen address helpers */

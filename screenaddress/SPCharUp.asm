@@ -28,6 +28,8 @@ IF DISP_HIRES
    and $18
    cp $18
    ccf
+ELIF DISP_8192
+   cp $20
 ELSE
    cp $40
 ENDIF

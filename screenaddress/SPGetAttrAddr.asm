@@ -26,6 +26,9 @@ IF DISP_SPECTRUM
    rrca
    rrca
    rrca
+IF DISP_8192
+    and     @00111111
+ENDIF
    ld d,a
    ret
 
